@@ -100,14 +100,63 @@ html(lang="en")
                       +icon('arrow', 'slider-arrow__icon')
                     .slider__right 
                       +icon('arrow', 'slider-arrow__icon')
-                .slider__navigation
-                  - var icons = [["slider-navigation-dot", "slider-navigation-dot", "slider-navigation-dot", "slider-navigation-dot"],[]];
-                    ul.slider-navigation-dot__list
-                      each item, index in icons[0]
-                        if index == 0
-                          li.slider-navigation-dot__item.slider-navigation-dot__item--active
-                            +icon(item, "slider-navigation-dot__icon")
-                        else
-                          li.slider-navigation-dot__item
-                            +icon(item, "slider-navigation-dot__icon")
+                .slider__item
+                  .slider__content
+                    - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+                      ul.slider__tags.tags
+                        each item, index in tags[0]
+                          li.tags__item #{item}
+                    h3.slider__title Lorem ipsum dolor sit amet.
+                    .slider__text
+                      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore!
+                  .slider__image
+                    +image('content/slider__item-1.jpg', 'slider-content__image')
+                    .slider__tag--active Право на историю
+                    .slider__left
+                      +icon('arrow', 'slider-arrow__icon')
+                    .slider__right 
+                      +icon('arrow', 'slider-arrow__icon')
+                .slider__item
+                  .slider__content
+                    - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+                      ul.slider__tags.tags
+                        each item, index in tags[0]
+                          li.tags__item #{item}
+                    h3.slider__title Lorem ipsum dolor sit amet.
+                    .slider__text
+                      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore!
+                  .slider__image
+                    +image('content/slider__item-1.jpg', 'slider-content__image')
+                    .slider__tag--active Право на историю
+                    .slider__left
+                      +icon('arrow', 'slider-arrow__icon')
+                    .slider__right 
+                      +icon('arrow', 'slider-arrow__icon')
+                .slider__item
+                  .slider__content
+                    - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+                      ul.slider__tags.tags
+                        each item, index in tags[0]
+                          li.tags__item #{item}
+                    h3.slider__title Lorem ipsum dolor sit amet.
+                    .slider__text
+                      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore!
+                  .slider__image
+                    +image('content/slider__item-1.jpg', 'slider-content__image')
+                    .slider__tag--active Право на историю
+                    .slider__left
+                      +icon('arrow', 'slider-arrow__icon')
+                    .slider__right 
+                      +icon('arrow', 'slider-arrow__icon')
+
+              .slider__navigation
+                - var icons = [["slider-navigation-dot", "slider-navigation-dot", "slider-navigation-dot", "slider-navigation-dot"],[]];
+                  ul.slider-navigation-dot__list
+                    each item, index in icons[0]
+                      if index == 0
+                        li.slider-navigation-dot__item.slider-navigation-dot__item--active
+                          +icon(item, "slider-navigation-dot__icon")
+                      else
+                        li.slider-navigation-dot__item
+                          +icon(item, "slider-navigation-dot__icon")
 
