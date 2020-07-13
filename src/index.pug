@@ -11,7 +11,7 @@ html(lang="en")
     .wrapper
       .container
         header.header
-          .header__left
+          a(href="#").header__left
             +icon('header__logo', 'header-logo__img')
           .header__right
             - var icons = ["header__fb", "header__tw", "header__vk", "header__ok","header__tg", "header__yt"];
@@ -62,12 +62,52 @@ html(lang="en")
                 else
                   li.menu__item
                     a.menu__link(href="#"+ menu[1][index]) #{item}
-      .container
-        main.maincontent
-          section.section.short
-            .news__item
-              .news__content
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-              .news__image
-                +image("content/180х140.jpg", "img img--small")
+      main.main-content
+        .main__wrapper
+          .container.main-container
+            section.section.short
+              .news__item.news__item--short
+                .news__content.news__content--short
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+                .news__image.news__image--short
+                  +image("content/short-1.png", "img img--small")
+              .news__item.news__item--short
+                .news__content.news__content--short
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+                .news__image.news__image--short
+                  +image("content/short-2.png", "img img--small")
+              .news__item.news__item--short
+                .news__content.news__content--short
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+                .news__image.news__image--short
+                  +image("content/short-3.png", "img img--small")
+
+            section.slider.slider--main
+              .slider__wrapper
+                .slider__item
+                  .slider__content
+                    - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+                      ul.slider__tags.tags
+                        each item, index in tags[0]
+                          li.tags__item #{item}
+                    h3.slider__title Lorem ipsum dolor sit amet.
+                    .slider__text
+                      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore!
+                  .slider__image
+                    +image('content/slider__item-1.jpg', 'slider-content__image')
+                    .slider__tag--active Право на историю
+                    .slider__left
+                      +icon('arrow', 'slider-arrow__icon')
+                    .slider__right 
+                      +icon('arrow', 'slider-arrow__icon')
+                .slider__navigation
+                  - var icons = [["slider-navigation-dot", "slider-navigation-dot", "slider-navigation-dot", "slider-navigation-dot"],[]];
+                    ul.slider-navigation-dot__list
+                      each item, index in icons[0]
+                        if index == 0
+                          li.slider-navigation-dot__item.slider-navigation-dot__item--active
+                            +icon(item, "slider-navigation-dot__icon")
+                        else
+                          li.slider-navigation-dot__item
+                            +icon(item, "slider-navigation-dot__icon")
 

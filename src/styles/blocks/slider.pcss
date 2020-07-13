@@ -1,0 +1,142 @@
+.slider__wrapper {
+  overflow: hidden;
+  position: relative;
+  max-width: 750px;
+}
+
+.slider__item {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+
+.slider__right,
+.slider__left {
+  width: 16px;
+  height: 40px;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  cursor: pointer;
+}
+
+.slider__right {
+  right: 0;
+  transform: rotate(180deg) translate(100%, 10%);
+}
+
+.slider__left {
+  transform: translate(100%, 10%);
+}
+
+// .slider__right,
+// .slider__left {
+//   position: absolute;
+//   z-index: 10;
+//   cursor: pointer;
+// }
+
+// .slider__right {
+//   width: 50%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+// }
+
+// .slider__left {
+//   width: 50%;
+//   height: 100%;
+//   top: 0;
+//   right: 0;
+// }
+
+.slider-arrow__icon {
+  width: 16px;
+  height: 40px;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke: $slider-buttons-calm-color;
+
+  &:hover {
+    stroke: $slider-buttons-hover-color;
+  }
+}
+
+.slider__image {
+  margin-bottom: 25px;
+  position: relative;
+  // opacity: .4;
+}
+
+.slider__title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+
+.slider__text {
+  color: $slider-text-color;
+  font-size: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  color: $slider-tags-color;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.tags__item {
+
+  &::after {
+    content: '\00B7';
+    padding: 0 5px;
+  }
+
+  &:last-child {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.slider__tag--active {
+  background-color: $slider-tag--active-background-color;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.slider-navigation-dot__list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-navigation-dot__item {
+  margin-right: 10px;
+  fill: $slider-navigation-dot-calm-color;
+  cursor: pointer;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--active {
+    fill: $slider-navigation-dot--active-color;
+  }
+
+  &:hover {
+    fill: $slider-navigation-dot--active-color;
+  }
+}
+
+.slider-navigation-dot__icon {
+  width: 10px;
+}
