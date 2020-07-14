@@ -1,5 +1,24 @@
 .section {
   display: flex;
+  margin-bottom: 50px;
+  position: relative;
+  flex-flow: column;
+}
+
+.section__wrapper {
+  background: no-repeat center url('~images/decoration/section-shadow.png');
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  transform: translateY(100%);
+
+  // &--slider {
+  //   transform: translateY(100%);
+  // }
+
+  // &--news {
+  // }
 }
 
 .short {
@@ -11,5 +30,19 @@
 
 .slider {
   width: 60%;
+  margin-right: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: white;
+  max-height: 650px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
+.news {
+  width: 35%;
+  max-width: 360px;
+  display: flex;
+  flex-flow: column wrap;
+}

@@ -11,30 +11,43 @@
 .menu__list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   height: 50px;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .menu__item {
   text-align: center;
   padding-top: 12px;
+  margin-right: 40px;
+  color: $nav-menu-item-text-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &--active {
     height: 100%;
-    background-color: #f0f5fa;
+    background-color: $nav-menu-background-color;
     color: $text-color;
-    border-top: solid 5px #ffaa02;
+    border-top: solid 5px $nav-menu--active-color;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     transform: translateY(-5px);
     padding: 12px 35px 90px;
     transition: linear .3;
-  }
+    cursor: default;
 
-  &:hover {
-    text-decoration: underline;
+    >.menu__link {
+      cursor: default;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
