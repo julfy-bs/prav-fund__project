@@ -1,0 +1,151 @@
+.footer__info {
+  width: 100%;
+  min-height: 311px;
+  background-color: #1f4b79;
+  padding: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  color: #ffffff;
+}
+
+.footer-info__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__logo {
+  width: 10%;
+  transform: translateY(-17px);
+}
+
+
+.footer-logo__icon {
+  fill: #99c5e8;
+  width: 100px;
+}
+
+.copyright {
+  width: 40%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.copyright__name {
+  margin-bottom: 20px;
+}
+
+.copyright__executor {
+  margin-bottom: 25px;
+}
+
+.executor__link {
+  color: #aad2f0;
+}
+
+.copytight__warning {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.politics,
+.old-version {
+  font-size: 13px;
+  color: #aad2f0;
+}
+
+.politics {
+  margin-bottom: 5px;
+}
+
+.footer-links__list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-links__item {
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer__menu {
+  width: 20%;
+  max-width: 200px;
+  color: #aad2f0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+
+}
+
+.footer-links__link,
+.contacts__link {
+  text-decoration: none;
+  display: flex;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 20%;
+  max-width: 210px;
+  color: #aad2f0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  height: 100%;
+}
+
+.footer-menu__heading {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: 1px dashed  #2a87ce;
+  padding: 5px 15px 5px 0;
+  margin-bottom: 10px;
+}
+
+.adress {
+  margin-bottom: 10px;
+
+  &::before {
+    content: '';
+    background: no-repeat bottom/100% url('/src/images/icons/Contact_adress.svg');
+    width: 35px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.phone {
+  margin-bottom: 10px;
+
+  &::before {
+    content: '';
+    background: no-repeat bottom/100% url('/src/images/icons/Contact_tel.svg');
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.email {
+  &::before {
+    content: '';
+    background: no-repeat bottom/100% url('/src/images/icons/Contact_mail.svg');
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
