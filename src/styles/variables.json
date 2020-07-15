@@ -32,7 +32,6 @@
   "menu-gradient": "linear-gradient(to right, #1f4b79 0%, #2a87ce 30%, #2a87ce 60%, #1f4b79 100%)",
   "section-gradient": "linear-gradient(to right, #000 0%, #fff 30%, #000 60%, #fff 100%)",
   "links-color": "#4b6fd7",
-  "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",
   "bp-phones": "480px"
