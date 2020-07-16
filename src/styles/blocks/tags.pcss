@@ -1,0 +1,21 @@
+.slider__content_tags {
+  display: flex;
+  flex-flow: row wrap;
+  color: $tags-color;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.slider__content_item {
+
+  &::after {
+    content: '\00B7';
+    padding: 0 5px;
+  }
+
+  &:last-child {
+    &::after {
+      content: none;
+    }
+  }
+}

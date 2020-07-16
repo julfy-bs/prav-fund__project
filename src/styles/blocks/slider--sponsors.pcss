@@ -1,0 +1,123 @@
+.sponsors__title {
+  color: $news-title-color;
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.slider--sponsors {
+  position: relative;
+  // overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  // width: 1110px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.slider__wrapper--sponsors {
+  display: flex;
+  transition: transform 0.6s ease;
+  overflow: hidden;
+  width: 1110px;
+}
+
+.slider__item--sponsors {
+  flex: 0 0 17%;
+  width: 185px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-end;
+  height: 200px;
+  border-right: 1px solid #dce5ec;
+  // margin-right: 10px;
+  // padding: 5px 10px 5px 5px;
+
+  &:last-child {
+    border: none;
+  }
+
+}
+
+
+
+.slider__text--sponsors {
+  color: #6f6f6e;
+  font-size: 13px;
+  width: 160px;
+  height: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.slider__image-wrapper--sponsors {
+  max-width: 160px;
+  max-height: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.slider__control--sponsors  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.slider__control--sponsors:hover,
+.slider__control--sponsors:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9;
+}
+
+.slider__control_left--sponsors  {
+  left: 0;
+}
+
+.slider__control_right--sponsors  {
+  right: 0;
+}
+
+.slider__control--sponsors::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider-arrow__icon--sponsors {
+  width: 10px;
+  height: 25px;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke: $sponsors-slider-buttons-calm-color;
+
+  &:hover {
+    stroke: $hover-color;
+  }
+
+  &--right {
+    transform: rotate(180deg);
+  }
+}

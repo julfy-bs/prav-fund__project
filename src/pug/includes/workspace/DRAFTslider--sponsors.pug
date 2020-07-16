@@ -1,0 +1,89 @@
+footer.footer
+  .footer__sponsors.sponsors
+    .container.footer__container
+      h2.sponsors__title Наши партнеры
+      .sponsors__slider
+        .sponsors-slider__left
+          +icon('arrow', 'sponsors-slider-arrow__icon sponsors-slider-arrow__icon--left')
+        .sponsors-slider__wrapper
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/IRZ-logo.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Институт Русского зарубежья
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/logo-2.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Фонд поддержки публичной дипломатии имени А. М. Горчакова
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/logo-3.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Международная ассоциация русскоязычных адвокатов
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/logo-4.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Фонд «Русский мир»
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/logo-5.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Русский век. Портал для российских соотечественников
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/logo-6.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Дом русского зарубежья имени Александра Солженицына
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/IRZ-logo.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Институт Русского зарубежья
+          .sponsors-slider__item
+            .sponsors-slider__image-wrapper
+              +image('content/logo-2.png', 'sponsors-slider__image')
+            a(href="#" alt="#").sponsors-slider__text
+              p Фонд поддержки публичной дипломатии имени А. М. Горчакова 
+        .sponsors-slider__right
+          +icon('arrow', 'sponsors-slider-arrow__icon sponsors-slider-arrow__icon--right')
+  .footer__info
+    .container.footer-info__container
+      a(href="#").footer__logo
+        +icon('footer__logo', 'footer-logo__icon')
+      .footer__copyright.copyright
+        p.copyright__name © Фонд поддержки и защиты прав соотечественников, проживающих за рубежом.   2012-2020
+        p.copyright__executor Исполнитель проекта: 
+          a.executor__link Институт Русского зарубежья
+        p.copytight__warning Cайт Фонда поддержки и защиты прав соотечественников, проживающих за рубежом, является средством массовой информации. <br> Позиция редакции не всегда совпадает с точкой зрения авторов. <br>При полном или частичном использовании материалов ссылка на www.pravfond.ru обязательна.
+        .copyright__politics.politics
+          a.politics__link Политика обработки персональных данных
+        .copyright__old-version.old-version
+          a.old-version__link Старая версия сайта
+      .footer__menu 
+        .footer-menu__heading Быстрые ссылки    
+        - var menu = [['Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр'], []];
+        ul.footer-links__list 
+          each item, index in menu[0]
+            li.footer-links__item
+              a.footer-links__link(href="#"+ menu[1][index]) #{item}
+
+      .footer__contacts
+        .footer-contacts__wrapper
+          .footer-menu__heading Контакты
+          ul.contacts 
+            li.contacts__item
+              a.contacts__link.adress(href="#") 119200, Россия, г. Москва, ул. Арбат 55/32 каб. 310
+            li.contacts__item
+              a.contacts__link.phone(href="#") +7 499 922-38-58
+            li.contacts__item
+              a.contacts__link.email(href="#") E-mail: rusfund2012@mail.ru
+
+        .footer__socials
+          - var icons = ["header__fb", "header__vk", "header__ok"];
+            ul.socials.header__socials
+              each item in icons
+                li.socials__item
+                  a(href="#").socials__link
+                    +icon(item, "socials__icon")

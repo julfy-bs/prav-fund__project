@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#1f4b79;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:1.3px;}</style></defs><title>Asset 4</title><g id="Layer_2" data-name="Layer 2"><g id="фото1_copy_2" data-name="фото1 copy 2"><rect class="cls-1" width="24" height="24"/><line class="cls-2" x1="6" y1="6" x2="18" y2="18"/><line class="cls-2" x1="18" y1="6" x2="6" y2="18"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <title>
+        Asset 4
+    </title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="фото1_copy_2" data-name="фото1 copy 2">
+            <rect width="24" height="24" style="fill:#1f4b79"/>
+            <line class="cls-2" x1="6" y1="6" x2="18" y2="18"/>
+            <line class="cls-2" x1="18" y1="6" x2="6" y2="18"/>
+        </g>
+    </g>
+</svg>

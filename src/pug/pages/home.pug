@@ -1,0 +1,15 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Фонд поддержки и защиты прав соотечественников, проживающих за рубежом - Главная'
+  - var pageClass = 'home-page'
+
+block content
+  main.main-content
+    .main__wrapper
+      .container.main-container
+        include ../includes/modules/short
+        include ../includes/modules/slider-main
+        include ../includes/modules/news
+
+
