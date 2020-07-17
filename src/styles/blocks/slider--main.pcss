@@ -4,7 +4,7 @@
 }
 
 .slider__item {
-  margin-bottom: 1000px;
+  // margin-bottom: 1000px;
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -13,7 +13,14 @@
   position: absolute;
   top: 25%;
   display: flex;
-  z-index: 100;
+  z-index: 16;
+
+  &>.slider-arrow__icon {
+    &:hover {
+      stroke: $slider-buttons-hover-color;
+    }
+  }
+
 }
 
 .slider__control_left {
@@ -27,11 +34,13 @@
 .slider__control::before {
   content: '';
   position: absolute;
-  z-index: 1000;
+  z-index: 15;
   background: transparent no-repeat center center;
   background-size: 100% 100%;
   width: 20px;
   height: 40px;
+
+
 }
 
 .slider-arrow__icon {
@@ -102,6 +111,14 @@
   max-height: 155px;
   overflow: hidden;
 
+  @include bigTablets {
+    max-height: 117px;
+    height: auto;
+  }
+
+  @include tablets {
+    max-height: 101px;
+  }
 }
 
 

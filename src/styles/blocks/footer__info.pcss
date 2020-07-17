@@ -6,6 +6,11 @@
   display: flex;
   flex-flow: row nowrap;
   color: #ffffff;
+
+  @include bigTablets {
+    position: relative;
+    padding: 40px 18.5%;
+  }
 }
 
 .footer-info__container {
@@ -13,11 +18,24 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include bigTablets {
+    flex-wrap: wrap;
+  }
+
 }
 
 .footer__logo {
   width: 10%;
   transform: translateY(-17px);
+
+  @include bigTablets {
+    position: absolute;
+    top: 40px;
+    left: 5%;
+
+    width: 20%;
+  }
 }
 
 
@@ -30,6 +48,12 @@
   width: 40%;
   font-size: 14px;
   font-weight: 400;
+
+  @include bigTablets {
+    width: 75%;
+    margin-bottom: 50px;
+  }
+
 }
 
 .copyright__name {
@@ -82,6 +106,9 @@
   font-weight: 400;
   line-height: 1.7;
 
+  @include bigTablets {
+    width: 40%;
+  }
 }
 
 .footer-links__link,
@@ -102,6 +129,20 @@
   font-weight: 400;
   line-height: 1.7;
   height: 100%;
+
+  @include bigTablets {
+    width: 40%;
+    height: auto;
+  }
+}
+
+.contacts {
+  margin-bottom: 40px;
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-menu__heading {

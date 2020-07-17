@@ -9,3 +9,23 @@ nav.menu
           else
             li.menu__item
               a.menu__link(href="#"+ menu[1][index]) #{item}
+        //- Бургер-меню для планшетов и телефонов
+    .burger-menu#hamburger-menu-link
+      - var icons = ["menu"]
+        each item in icons
+          +icon(item, "menu-icon")
+    nav.hamburger-menu#hamburger-menu
+      .burger-header__menu
+      - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], []];
+      ul.menu__list--hamburger
+        each item, index in menu[0]
+          li.menu__item.menu__item--hamburger
+            a.menu__link(href="#"+ menu[1][index]) #{item}
+      - var icons = ["header__fb", "header__vk", "header__ok"];
+        ul.socials.hamburger-menu__socials
+          each item in icons
+            li.socials__item
+              a.socials__link(href="#" target="_blank")
+                +icon(`${item}`, 'socials__icon')
+        a.close-button#close-nav-button(href="#")
+          +icon('popUp-close', 'close-button__img', '20')

@@ -16,6 +16,18 @@
   height: 50px;
   font-size: 16px;
   font-weight: 500;
+
+  @include bigTablets {
+    display: none;
+  }
+
+  &--hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
 }
 
 .menu__item {
@@ -47,6 +59,17 @@
 
     &:hover {
       text-decoration: none;
+    }
+  }
+
+  &--hamburger {
+    color: $text-color;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      text-decoration: none;
+      color: $links-color;
     }
   }
 }

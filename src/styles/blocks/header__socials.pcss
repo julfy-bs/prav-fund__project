@@ -2,6 +2,12 @@
   display: flex;
   flex-flow: row nowrap;
   margin-right: 10%;
+
+  @include bigTablets {
+    margin-right: 125px;
+    margin-bottom: 10px;
+  }
+
 }
 
 .socials__item {
@@ -15,7 +21,7 @@
 .socials__icon {
   width: 30px;
   height: 30px;
-  fill:$main-social-color;
+  fill: $main-social-color;
 
   &:hover {
     fill: $hover-color;

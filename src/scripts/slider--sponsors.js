@@ -96,9 +96,9 @@ var multiItemSlider = (function () {
 
     // обработчик события click для кнопок "назад" и "вперед"
     var _controlClick = function (e) {
-      if (e.target.classList.contains('slider__control')) {
+      if (e.target.classList.contains('slider__control--sponsors')) {
         e.preventDefault();
-        var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+        var direction = e.target.classList.contains('slider-sponsors__click-listener_right') ? 'right' : 'left';
         _transformItem(direction);
         clearInterval(_interval);
         _cycle(_config.direction);
@@ -146,6 +146,6 @@ var multiItemSlider = (function () {
   }
 }());
 
-var slider = multiItemSlider('.slider', {
+var slider = multiItemSlider('.slider--sponsors', {
   isCycling: true
 })

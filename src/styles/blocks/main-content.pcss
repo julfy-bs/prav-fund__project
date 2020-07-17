@@ -5,6 +5,8 @@
 .main__wrapper {
   background-image: url("~images/decoration/shadow-main.png");
   background-repeat: no-repeat;
+
+
 }
 
 .main-container {
@@ -12,4 +14,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  @include bigTablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

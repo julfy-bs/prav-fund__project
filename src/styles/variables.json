@@ -26,6 +26,7 @@
   "menu-text-color": "#FFF",
   "main-background-color": "#f0f5fa",
   "main-social-color": "#40aaf0",
+  "close-svg-color": "#1f4b79",
   "short-text-color": "#1f4b79",
   "short-border-color": "#cccccc",
   "menu-text-color--active": "#1d1d1b",

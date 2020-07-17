@@ -10,8 +10,8 @@ section.section.news
         else
           li.news-menu__item
             .news-menu__link #{item}
-    .news__content            
-      .all
+    .news__content
+      .news__content_item.news__content_item--active.all(data-index="0")
         .news__item.news__item--news
           .news__date 
             span.time 17:22   
@@ -42,7 +42,7 @@ section.section.news
               li.slider__content_item #{item}
           .news__content
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-      .fund
+      .news__content_item.fund(data-index="1")
         .news__item.news__item--news
           .news__date 
             span.time 17:22   
@@ -73,7 +73,7 @@ section.section.news
               li.slider__content_item #{item}
           .news__content
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-      .center
+      .news__content_item.center(data-index="2")
         .news__item.news__item--news
           .news__date 
             span.time 17:22   

@@ -13,22 +13,38 @@
   // overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
-  // width: 1110px;
+  // width: 1000px;
   align-items: center;
   justify-content: space-between;
+
+}
+
+.main__wrapper--sponsors {
+  position: relative;
+  overflow: hidden;
+  width: 1110px;
+  margin: 0 30px;
+
+  @include bigTablets {
+    width: 1000px;
+  }
+
+  @include tablets {
+    flex: 0 0 50%;
+    width: 560px;
+    margin: 0;
+  }
 
 }
 
 .slider__wrapper--sponsors {
   display: flex;
   transition: transform 0.6s ease;
-  overflow: hidden;
-  width: 1110px;
 }
 
 .slider__item--sponsors {
-  flex: 0 0 17%;
-  width: 185px;
+  flex: 0 0 16.666%;
+  width: 180px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -38,10 +54,19 @@
   // margin-right: 10px;
   // padding: 5px 10px 5px 5px;
 
-  &:last-child {
-    border: none;
+  // &:last-child {
+  //   border: none;
+  // }
+
+  @include bigTablets {
+    flex: 0 0 25%;
+    width: 250px;
   }
 
+  @include tablets {
+    flex: 0 0 40%;
+    width: 100px;
+  }
 }
 
 
@@ -73,36 +98,25 @@
   height: 50%;
 }
 
-.slider__control--sponsors  {
+.slider__control--sponsors {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
-}
-
-.slider__control--sponsors:hover,
-.slider__control--sponsors:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  opacity: .9;
-}
-
-.slider__control_left--sponsors  {
-  left: 0;
-}
-
-.slider__control_right--sponsors  {
-  right: 0;
+  height: 100%;
+  // transform: translateY(-50%);
+  margin: 0 10px;
 }
 
 .slider__control--sponsors::before {
   content: '';
-  display: inline-block;
+  position: absolute;
+  top: 25%;
   width: 20px;
-  height: 20px;
+  height: 100px;
   background: transparent no-repeat center center;
   background-size: 100% 100%;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .slider-arrow__icon--sponsors {
@@ -112,6 +126,7 @@
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke: $sponsors-slider-buttons-calm-color;
+  cursor: pointer;
 
   &:hover {
     stroke: $hover-color;
