@@ -19,6 +19,10 @@
   color: $short-text-color;
   font-size: 13px;
   margin-bottom: 40px;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .slider {
@@ -36,7 +40,10 @@
     max-width: 100%;
     margin-bottom: 50px;
   }
-
+  @include tablets {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .news {

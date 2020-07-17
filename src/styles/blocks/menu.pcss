@@ -8,6 +8,13 @@
   margin-bottom: 3px;
 }
 
+.menu__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menu__list {
   display: flex;
   flex-flow: row wrap;
@@ -77,4 +84,20 @@
 .menu__link {
   text-decoration: none;
 
+}
+
+.phones__nav {
+  display: none;
+
+  @include phones {
+
+    &>.socials {
+      margin: 0;
+      margin-right: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    display: flex;
+  }
 }

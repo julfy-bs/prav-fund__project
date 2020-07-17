@@ -11,6 +11,10 @@
     position: relative;
     padding: 40px 18.5%;
   }
+
+  @include phones {
+    padding: 40px 0 40px 25%;
+  }
 }
 
 .footer-info__container {
@@ -109,6 +113,10 @@
   @include bigTablets {
     width: 40%;
   }
+
+  @include phones {
+    display: none;
+  }
 }
 
 .footer-links__link,
@@ -134,6 +142,11 @@
     width: 40%;
     height: auto;
   }
+
+  @include phones {
+    width: 70%;
+    max-width: 100%;
+  }
 }
 
 .contacts {
@@ -152,6 +165,10 @@
   border-bottom: 1px solid #2a87ce;
   padding: 5px 15px 5px 0;
   margin-bottom: 10px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .adress {
@@ -161,7 +178,7 @@
     content: '';
     background: no-repeat bottom/100% url('/src/images/icons/Contact_adress.svg');
     width: 35px;
-    height: 30px;
+    height: 35px;
     display: inline-block;
     margin-right: 10px;
   }

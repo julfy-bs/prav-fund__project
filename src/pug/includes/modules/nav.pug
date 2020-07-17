@@ -1,5 +1,5 @@
 nav.menu
-  .container
+  .container.menu__container
     - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], []];
       ul.menu__list
         each item, index in menu[0]
@@ -14,6 +14,20 @@ nav.menu
       - var icons = ["menu"]
         each item in icons
           +icon(item, "menu-icon")
+    - var icons = ["header__fb", "header__vk", "header__ok"];
+    .phones__nav
+      ul.socials.header__socials
+        each item in icons
+          li.socials__item
+            a(href="#").socials__link
+              +icon(item, "socials__icon")
+      .search#search-link
+        label.search__block
+          input(type="text" name="name" placeholder="" required).search__input
+        - var icons = ["search-icon"]
+          each item in icons
+            +icon(item, "search-icon")
+
     nav.hamburger-menu#hamburger-menu
       .burger-header__menu
       - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], []];
@@ -29,3 +43,4 @@ nav.menu
                 +icon(`${item}`, 'socials__icon')
         a.close-button#close-nav-button(href="#")
           +icon('popUp-close', 'close-button__img', '20')
+
