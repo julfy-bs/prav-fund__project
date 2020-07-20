@@ -1,34 +1,29 @@
-.close-button__img {
-  fill: none;
-  stroke: #fff;
-  stroke-miterlimit: 10;
-  stroke-width: 1.3px
+.close-button {
+position: absolute;
+top: 54px;
+left: 65px;
+background: transparent;
+z-index: 150;
+height: 35px;
+width: 35px;
+
+
+@include phones {
+  left: 1%;
+  top: 1%;
 }
 
-// .close-button {
-//   position: absolute;
-//   top: 40px;
-//   right: 35px;
-//   background: transparent;
-//   z-index: 150;
-//   height: 30px;
-//   width: 30px;
+}
+
+.close-button__img {
+fill: none;
+fill: $close-svg-color;
+stroke: #fff;
+stroke-miterlimit: 10;
+stroke-width: 1.3px;
 
 
-//   @include phones {
-//     right: 1%;
-//     top: 1%;
-//   }
-
-//   @include phones {
-//     right: 35px;
-//   }
-// }
-
-// .close-button__img {
-//   fill: $grey;
-
-//   &:hover {
-//     fill: $links-color;
-//   }
-// }
+&:hover {
+  fill: $hover-color;
+}
+}

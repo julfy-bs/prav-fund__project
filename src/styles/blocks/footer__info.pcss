@@ -6,6 +6,15 @@
   display: flex;
   flex-flow: row nowrap;
   color: #ffffff;
+
+  @include bigTablets {
+    position: relative;
+    padding: 40px 18.5%;
+  }
+
+  @include phones {
+    padding: 40px 0 40px 25%;
+  }
 }
 
 .footer-info__container {
@@ -13,11 +22,24 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include bigTablets {
+    flex-wrap: wrap;
+  }
+
 }
 
 .footer__logo {
   width: 10%;
   transform: translateY(-17px);
+
+  @include bigTablets {
+    position: absolute;
+    top: 40px;
+    left: 5%;
+
+    width: 20%;
+  }
 }
 
 
@@ -30,6 +52,12 @@
   width: 40%;
   font-size: 14px;
   font-weight: 400;
+
+  @include bigTablets {
+    width: 75%;
+    margin-bottom: 50px;
+  }
+
 }
 
 .copyright__name {
@@ -82,6 +110,13 @@
   font-weight: 400;
   line-height: 1.7;
 
+  @include bigTablets {
+    width: 40%;
+  }
+
+  @include phones {
+    display: none;
+  }
 }
 
 .footer-links__link,
@@ -102,6 +137,25 @@
   font-weight: 400;
   line-height: 1.7;
   height: 100%;
+
+  @include bigTablets {
+    width: 40%;
+    height: auto;
+  }
+
+  @include phones {
+    width: 70%;
+    max-width: 100%;
+  }
+}
+
+.contacts {
+  margin-bottom: 40px;
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-menu__heading {
@@ -111,6 +165,10 @@
   border-bottom: 1px solid #2a87ce;
   padding: 5px 15px 5px 0;
   margin-bottom: 10px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .adress {
@@ -118,9 +176,9 @@
 
   &::before {
     content: '';
-    background: no-repeat bottom/100% url('/src/images/icons/Contact_adress.svg');
+    background: svg-load('Contact_adress.svg', fill=#5ba3d9, width=100%, height=100%) bottom center no-repeat;
     width: 35px;
-    height: 30px;
+    height: 35px;
     display: inline-block;
     margin-right: 10px;
   }
@@ -131,7 +189,7 @@
 
   &::before {
     content: '';
-    background: no-repeat bottom/100% url('/src/images/icons/Contact_tel.svg');
+    background: svg-load('Contact_tel.svg', fill=#5ba3d9, width=100%, height=100%) bottom center no-repeat;
     width: 19px;
     height: 19px;
     display: inline-block;
@@ -142,7 +200,7 @@
 .email {
   &::before {
     content: '';
-    background: no-repeat bottom/100% url('/src/images/icons/Contact_mail.svg');
+    background: svg-load('Contact_mail.svg', fill=#5ba3d9, width=100%, height=100%) bottom center no-repeat;
     width: 21px;
     height: 21px;
     display: inline-block;

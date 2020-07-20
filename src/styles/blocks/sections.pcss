@@ -19,6 +19,10 @@
   color: $short-text-color;
   font-size: 13px;
   margin-bottom: 40px;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .slider {
@@ -29,7 +33,17 @@
   max-width: 760px;
   margin-right: 40px;
   background-color: white;
-  max-height: 635px;
+
+  @include bigTablets {
+    width: 80%;
+    margin: 0;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  @include tablets {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .news {
@@ -37,6 +51,12 @@
   max-width: 360px;
   display: flex;
   flex-flow: column wrap;
+
+  @include bigTablets {
+    display: none;
+  }
+
+
 }
 
 .fund,

@@ -8,6 +8,13 @@
   margin-bottom: 3px;
 }
 
+.menu__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menu__list {
   display: flex;
   flex-flow: row wrap;
@@ -16,6 +23,19 @@
   height: 50px;
   font-size: 16px;
   font-weight: 500;
+  width: 100%;
+
+  @include bigTablets {
+    display: none;
+  }
+
+  &--hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
 }
 
 .menu__item {
@@ -49,9 +69,36 @@
       text-decoration: none;
     }
   }
+
+  &--hamburger {
+    color: $text-color;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      text-decoration: none;
+      color: $links-color;
+    }
+  }
 }
 
 .menu__link {
   text-decoration: none;
 
+}
+
+.phones__nav {
+  display: none;
+
+  @include phones {
+
+    &>.socials {
+      margin: 0;
+      margin-right: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    display: flex;
+  }
 }

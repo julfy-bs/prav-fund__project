@@ -6,3 +6,4 @@ if (process.env.NODE_ENV === "development") {
 import "./scripts/burger-menu";
 import "./scripts/slider--main";
 import "./scripts/slider--sponsors";
+import "./scripts/news-tabs";

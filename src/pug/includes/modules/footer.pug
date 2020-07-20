@@ -23,7 +23,6 @@ footer.footer
           each item, index in menu[0]
             li.footer-links__item
               a.footer-links__link(href="#"+ menu[1][index]) #{item}
-
       .footer__contacts
         .footer-contacts__wrapper
           .footer-menu__heading Контакты
@@ -37,7 +36,7 @@ footer.footer
 
         .footer__socials
           - var icons = ["header__fb", "header__vk", "header__ok"];
-            ul.socials.header__socials
+            ul.socials.footer__socials
               each item in icons
                 li.socials__item
                   a(href="#").socials__link
