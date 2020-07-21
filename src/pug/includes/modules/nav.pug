@@ -10,7 +10,7 @@ nav.menu
             li.menu__item
               a.menu__link(href="#"+ menu[1][index]) #{item}
         //- Бургер-меню для планшетов и телефонов
-    .burger-menu#hamburger-menu-link
+    a.burger-menu#hamburger-menu-link(href="#")
       - var icons = ["menu"]
         each item in icons
           +icon(item, "menu-icon")

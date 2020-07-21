@@ -1,67 +1,69 @@
 section.section.slider
-  .slider__wrapper
-    .slider__item
-      .slider__content
-        .slider__content_header
-          +image("content/slider__item-1.jpg", "avatar-img")
-          .slider__content_left-shadow
-          .slider__content_right-shadow
-          a.slider__content_section 1 Право на историю
-        .slider__content_footer 
-          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-            ul.slider__content_tags
-              each item, index in tags[0]
-                li.slider__content_item
-                  a.slider__content_link #{item}
-          h3.slider__content_title Lorem ipsum dolor sit amet.
-          .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
-    .slider__item
-      .slider__content
-        .slider__content_header
-          +image("content/slider__item-2.jpg", "avatar-img")
-          .slider__content_left-shadow
-          .slider__content_right-shadow
-          span.slider__content_section 2 Право на историю
-        .slider__content_footer 
-          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-            ul.slider__content_tags
-              each item, index in tags[0]
-                li.slider__content_item
-                  a.slider__content_link #{item}
-          h3.slider__content_title Lorem ipsum dolor sit amet.
-          .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
-    .slider__item
-      .slider__content
-        .slider__content_header
-          +image("content/slider__item-1.jpg", "avatar-img")
-          .slider__content_left-shadow
-          .slider__content_right-shadow
-          a.slider__content_section 3 Право на историю
-        .slider__content_footer 
-          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-            ul.slider__content_tags
-              each item, index in tags[0]
-                li.slider__content_item
-                  a.slider__content_link #{item}
-          h3.slider__content_title Lorem ipsum dolor sit amet.
-          .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
-    .slider__item
-      .slider__content
-        .slider__content_header
-          +image("content/slider__item-2.jpg", "avatar-img")
-          .slider__content_left-shadow
-          .slider__content_right-shadow
-          span.slider__content_section 4 Право на историю
-        .slider__content_footer 
-          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-            ul.slider__content_tags
-              each item, index in tags[0]
-                li.slider__content_item
-                  a.slider__content_link #{item}
-          h3.slider__content_title Lorem ipsum dolor sit amet.
-          .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
-  a(href='#' role='button').slider__control.slider__control_left
-    +icon('arrow', 'slider-arrow__icon slider-arrow__icon--left')
-  a(href='#' role='button').slider__control.slider__control_right
-    +icon('arrow', 'slider-arrow__icon slider-arrow__icon--right')
+  .main__wrapper--slider-main
+    .slider__wrapper
+      .slider__item
+        .slider__content
+          .slider__content_header
+            +image("content/slider__item-1.jpg", "avatar-img")
+            .slider__content_left-shadow
+            .slider__content_right-shadow
+            a.slider__content_section 1 Право на историю
+          .slider__content_footer 
+            - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+              ul.search-tags
+                each item, index in tags[0]
+                  li.search-tags__item
+                    a.search-tags__link #{item}
+            h3.slider__content_title Lorem ipsum dolor sit amet.
+            .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
+      .slider__item
+        .slider__content
+          .slider__content_header
+            +image("content/slider__item-2.jpg", "avatar-img")
+            .slider__content_left-shadow
+            .slider__content_right-shadow
+            span.slider__content_section 2 Право на историю
+          .slider__content_footer 
+            - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+              ul.search-tags
+                each item, index in tags[0]
+                  li.search-tags__item
+                    a.search-tags__link #{item}
+            h3.slider__content_title Lorem ipsum dolor sit amet.
+            .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
+      .slider__item
+        .slider__content
+          .slider__content_header
+            +image("content/slider__item-1.jpg", "avatar-img")
+            .slider__content_left-shadow
+            .slider__content_right-shadow
+            a.slider__content_section 3 Право на историю
+          .slider__content_footer 
+            - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+              ul.search-tags
+                each item, index in tags[0]
+                  li.search-tags__item
+                    a.search-tags__link #{item}
+            h3.slider__content_title Lorem ipsum dolor sit amet.
+            .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
+      .slider__item
+        .slider__content
+          .slider__content_header
+            +image("content/slider__item-2.jpg", "avatar-img")
+            .slider__content_left-shadow
+            .slider__content_right-shadow
+            span.slider__content_section 4 Право на историю
+          .slider__content_footer 
+            - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+              ul.search-tags
+                each item, index in tags[0]
+                  li.search-tags__item
+                    a.search-tags__link #{item}
+            h3.slider__content_title Lorem ipsum dolor sit amet.
+            .slider__content_text  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti! Tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, tempora quia dolores illo debitis nesciunt. Ipsa, dolor! Excepturi, exercitationem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, quidem praesentium illo magnam consequatur aspernatur amet architecto aut hic harum beatae dolorum sint saepe officia. Unde doloribus tenetur, ipsa tempore quam modi eaque alias eius iste totam suscipit commodi cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veniam saepe nesciunt autem blanditiis. Aperiam autem sint eaque atque dolor ipsa quo perspiciatis nesciunt voluptatum amet animi laudantium consequuntur, itaque quisquam neque temporibus magnam, illum non adipisci earum illo explicabo! Dignissimos ullam temporibus odio quaerat! Aliquid harum sit ex ad.
+
+    a(href='#' role='button').slider__control.slider__control_left
+      +icon('arrow', 'slider-arrow__icon slider-arrow__icon--left')
+    a(href='#' role='button').slider__control.slider__control_right
+      +icon('arrow', 'slider-arrow__icon slider-arrow__icon--right')
   .section__wrapper.section__wrapper--news

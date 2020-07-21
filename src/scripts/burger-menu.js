@@ -5,8 +5,7 @@ const closeNavButton = document.querySelector('#close-nav-button');
 const navLinks = nav.querySelectorAll('.menu__link');
 
 hamburger.addEventListener('click', e => {
-  e.preventDefault();
-
+  // e.preventDefault(); Переход по ссылке оставлен для того, чтобы пользователь не застрял в случае, когда не видно кнопки "Закрыть бургер меню" 
   nav.classList.add('hamburger-menu--active');
   document.body.classList.add('restrictedScroll');
 });

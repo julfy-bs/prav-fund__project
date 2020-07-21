@@ -283,6 +283,6 @@ var multiItemSlider = (function () {
   }
 }());
 
-var slider = multiItemSlider('.slider', {
+var slider = multiItemSlider('.main__wrapper--slider-main', {
   isCycling: true
 });

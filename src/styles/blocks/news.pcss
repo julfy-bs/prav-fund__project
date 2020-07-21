@@ -1,3 +1,4 @@
+
 .news__title {
   color: $news-title-color;
   font-family: "Roboto Condensed";
@@ -7,7 +8,48 @@
   text-transform: uppercase;
   line-height: 1;
 }
+
 .news__wrapper {
   background-color: $news-background-color;
+  position: relative;
   // max-height: 600px;
+}
+
+.is-active {
+  height: 100%;
+  background-color: $news-menu--active-background-color;
+  color: $text-color;
+  border-top: solid 5px $news-menu--active-color;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  transform: translateY(-5px);
+  padding: 4% 3% 70px;
+  transition: linear .3;
+  cursor: default;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tab {
+  display: none;
+
+  >.news__item {
+    
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+}
+
+.tabs__content {
+  >.is-active {
+    display: block;
+    padding: 0;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+  }
 }

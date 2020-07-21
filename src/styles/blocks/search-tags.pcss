@@ -1,4 +1,4 @@
-.slider__content_tags {
+.search-tags {
   display: flex;
   flex-flow: row wrap;
   color: $tags-color;
@@ -6,7 +6,11 @@
   margin-bottom: 5px;
 }
 
-.slider__content_item {
+.search-tags__item {
+
+  &:hover {
+    color: $hover-color;
+  }
 
   &::after {
     content: '\00B7';
@@ -18,4 +22,8 @@
       content: none;
     }
   }
+} 
+
+.search-tags__link {
+  text-decoration: none;
 }
