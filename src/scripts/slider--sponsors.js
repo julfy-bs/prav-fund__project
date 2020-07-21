@@ -147,5 +147,5 @@ var multiItemSlider = (function () {
 }());
 
 var slider = multiItemSlider('.slider--sponsors', {
-  isCycling: true
+  isCycling: false
 })
