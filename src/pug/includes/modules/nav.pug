@@ -30,17 +30,11 @@ nav.menu
 
     nav.hamburger-menu#hamburger-menu
       .burger-header__menu
-      - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], []];
+      - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], ['О грантах и субсидиях']];
       ul.menu__list--hamburger
         each item, index in menu[0]
           li.menu__item.menu__item--hamburger
-            a.menu__link(href="#"+ menu[1][index]) #{item}
-      - var icons = ["header__fb", "header__vk", "header__ok"];
-        ul.socials.hamburger-menu__socials
-          each item in icons
-            li.socials__item
-              a.socials__link(href="#" target="_blank")
-                +icon(`${item}`, 'socials__icon')
+            a.menu__link(href="#") #{item}
+            a.menu__semi-link(href="#") #{index}
         a.close-button#close-nav-button(href="#")
           +icon('popUP-close', 'close-button__img', '20')
-
