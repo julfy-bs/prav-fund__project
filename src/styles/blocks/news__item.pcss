@@ -1,6 +1,6 @@
 .news__item {
   display: flex;
-
+  position: relative;
 
   &--short {
     flex-flow: row nowrap;
@@ -31,11 +31,18 @@
     padding: 0 0 20px;
     border-bottom: 1px solid #dce5ec;
 
-    &:last-child {
+    &:nth-child(3) {
       border: none;
       margin-bottom: 10px;
     }
   }
+}
+
+.news__heading {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: $text-color;
+  margin-bottom: 10px;
 }
 
 .news__content {
@@ -51,8 +58,35 @@
     @include tablets {
       font-style: 12px;
       overflow: hidden;
+      text-overflow: ellipsis;
       max-height: 60px;
     }
+  }
+
+  &--latest {
+    padding: 25px 30px;
+    flex-flow: column nowrap;
+  }
+
+  &--position {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 240px;
+    max-height: 160px;
+  }
+}
+
+.news__text {
+  display: flex;
+  color: $news-content-color;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &--latest {
+    color: $latest-text-color;
+    line-height: 1.6;
+    max-height: 181px;
   }
 }
 
@@ -64,6 +98,14 @@
     max-width: 83px;
     max-height: 83px;
   }
+
+  &--position {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-position: center center;
+  }
 }
 
 .news__date {
@@ -73,19 +115,59 @@
   flex-flow: row nowrap;
   align-items: center;
 
+  &--clock {
 
-  &::before {
-    content: '';
-    background: svg-load('ic_news.svg', fill=#5ba3d9, width=100%, height=100%) top center no-repeat;
-    width: 20px;
-    height: 20px;
-    padding-bottom: 4px;
-    margin-right: 2px;
+    &::before {
+      content: '';
+      display: inline-block;
+      background: svg-load('ic_clock.svg', fill=#5ba3d9, width=100%, height=100%) top center no-repeat;
+      width: 20px;
+      height: 20px;
+      padding-bottom: 4px;
+      margin-right: 2px;
+    }
+  }
+
+  &--pencil {
+    &::before {
+      content: '';
+      display: inline-block;
+      background: svg-load('ic_pencil.svg', fill=#5ba3d9, width=100%, height=100%) top center no-repeat;
+      width: 20px;
+      height: 20px;
+      padding-bottom: 4px;
+      margin-right: 2px;
+    }
+  }
+
+  &--position {
+    display: inline-block;
+    margin-bottom: 5px;
+
+    &::before {
+      padding: 0;
+    }
   }
 }
 
 .time {
   margin-right: 10px;
+}
+
+.date {
+  &--slash {
+    &::after {
+      content: ' /';
+      display: inline-block;
+    }
+
+  }
+}
+
+.author {
+  text-transform: uppercase;
+  padding-left: 3px;
+
 }
 
 .news-tags {

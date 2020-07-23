@@ -3,7 +3,7 @@
   flex-flow: row wrap;
   color: $tags-color;
   font-size: 13px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .search-tags__item {
@@ -22,6 +22,10 @@
       content: none;
     }
   }
+  // Возможность отключения отображения больше чем 3 тэгов
+  // &:nth-child(n+4) {
+  //   display: none;
+  // }
 } 
 
 .search-tags__link {

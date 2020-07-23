@@ -9,6 +9,24 @@
 
 }
 
+.row-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  // margin-bottom: 30px;
+
+  &--section {
+    justify-content: center;
+  }
+}
+
+.column-wrapper {
+  max-width: 70%;
+  &--side {
+    max-width: 30%;
+  }
+}
+
 .main-container {
   padding-top: 60px;
   display: flex;

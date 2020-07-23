@@ -1,0 +1,41 @@
+section.section.links-section
+  .links-section__item.links-child
+    .links-child__header
+      h2.links-child__title Гранты <br> и субсидии
+      +image('content/icon-grants.png', 'icon-grants__image')
+    .links-child__content
+      - var menu = [['Порядок предоставления', 'Формуляры заявок', 'Рекомендации', 'Статус заявки'], []];
+      ul.links-child__list
+        each item, index in menu[0]
+          li.links-child__item
+            a.links-child__link(href="#") #{item}
+    button.button.button--links 
+    .section__wrapper.section__wrapper--links
+
+  .links-section__item.links-child
+    .links-child__header
+      h2.links-child__title Центры <br> правовой поддержки
+      +image('content/icon-center.png', 'icon-grants__image')
+    .links-child__content
+      .links-child__image
+        +image('content/icon-map.png', 'icon-map__image')
+    button.button.button--links 
+    .section__wrapper.section__wrapper--links
+
+  .links-section__item.links-child
+    .links-child__header
+      h2.links-child__title Реализованные <br> проекты
+      +image('content/icon-projects.png', 'icon-grants__image')
+    .links-child__content
+      - var menu = [['Юридическая поддержка', 'Конференции', 'Семинары и тренинги', 'СМИ', 'Издательские проекты'], []];
+      ul.links-child__list
+        each item, index in menu[0]
+          li.links-child__item
+            a.links-child__link(href="#") #{item}
+    button.button.button--links 
+    .section__wrapper.section__wrapper--links
+
+
+
+
+

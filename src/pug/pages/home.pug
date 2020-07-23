@@ -8,8 +8,17 @@ block content
   main.main-content
     .main__wrapper
       .container.main-container
-        include ../includes/modules/short
-        include ../includes/modules/slider-main
-        include ../includes/modules/news
-
-
+        .row-wrapper
+          include ../includes/modules/short
+        .row-wrapper
+          include ../includes/modules/slider-main
+          include ../includes/modules/news
+        .row-wrapper.row-wrapper--section
+          include ../includes/modules/links-section
+        .row-wrapper
+        .column-wrapper.column-wrapper--main
+          include ../includes/modules/latest-news
+        .column-wrapper.column-wrapper--side
+          include ../includes/modules/position
+          include ../includes/modules/photo
+          include ../includes/modules/video

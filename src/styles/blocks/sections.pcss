@@ -5,6 +5,16 @@
   flex-flow: column;
 }
 
+.section__title {
+  color: $news-title-color;
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
 .section__wrapper {
   background: no-repeat center url('~images/decoration/section-shadow--slider.png');
   position: absolute;
@@ -12,6 +22,10 @@
   height: 25px;
   width: 100%;
   transform: translateY(100%);
+
+  &--links {
+    transform: translateY(100%) translateX(-30px);
+  }
 }
 
 .short {
@@ -19,6 +33,7 @@
   color: $short-text-color;
   font-size: 13px;
   margin-bottom: 40px;
+  width: 100%;
 
   @include phones {
     display: none;
@@ -26,8 +41,8 @@
 }
 
 .slider {
-  width: 62%;
-  padding-bottom: 30px;
+  width: 66%;
+  padding-bottom: 12px;
   max-width: 760px;
   margin-right: 40px;
   background-color: white;
@@ -37,6 +52,7 @@
     margin: 0;
     margin-bottom: 50px;
   }
+
   @include tablets {
     width: 100%;
     margin-bottom: 50px;
@@ -48,12 +64,30 @@
   max-width: 360px;
   display: flex;
   flex-flow: column wrap;
+  height: 100%;
 
   @include bigTablets {
     display: none;
   }
 
 
+}
+
+.links-section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.latest-news {
+  max-width: 800px;
+}
+
+.position {
+  max-width: 360px;
+  width: 360px;
+  margin-bottom: 10px;
 }
 
 
