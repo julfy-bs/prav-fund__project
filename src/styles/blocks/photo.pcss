@@ -1,0 +1,109 @@
+.main__photo-wrapper {
+  height: 100%;
+  background-color: $news-menu--active-background-color;
+  color: $news-content-color;
+  border-top: solid 5px $news-menu--active-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: translateY(-5px);
+  overflow: hidden;
+}
+
+.photo__wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+
+}
+
+.photo__buttons {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  z-index: 16;
+
+  &>.slider-arrow__icon {
+    &:hover {
+      stroke: $slider-buttons-hover-color;
+    }
+  }
+
+  @include phones {
+    top: 20%;
+  }
+}
+
+.photo__left {
+  left: 10px;
+}
+
+.photo__right {
+  right: 10px;
+}
+
+.photo__buttons::before {
+  content: '';
+  position: absolute;
+  z-index: 15;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  width: 20px;
+  height: 40px;
+}
+
+.photo-arrow__icon {
+  width: 10px;
+  height: 26px;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke: #a4a4a4;
+
+  &:hover {
+    stroke: $slider-buttons-hover-color;
+  }
+
+  &--right {
+    transform: rotate(180deg);
+  }
+}
+
+.photo__item {
+  // margin-bottom: 1000px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.photo__header {
+  width: 100%;
+  max-height: 240px;
+  padding: 30px;
+  background-color: $photo-image-background-color;
+}
+
+.photo__footer {
+  padding: 30px;
+  color: #1d1d1b;
+  font-size: 14px;
+}
+
+.photo__data {
+  color: #808080;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.photo__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 57px;
+  margin-bottom: 10px;
+
+}
+
+.photo__link {
+  color: #1f4b79;
+  font-size: 14px;
+  text-decoration: none;
+}

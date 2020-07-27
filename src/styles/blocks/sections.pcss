@@ -17,6 +17,7 @@
 
 .section__wrapper {
   background: no-repeat center url('~images/decoration/section-shadow--slider.png');
+  background-size: 100% 100%;
   position: absolute;
   bottom: 0;
   height: 25px;
@@ -24,7 +25,19 @@
   transform: translateY(100%);
 
   &--links {
-    transform: translateY(100%) translateX(-30px);
+    transform: translateY(100%) translateX(0);
+  }
+
+  &--photo {
+    bottom: 1%;
+  }
+
+  &--video {
+    bottom: 1%;
+  }
+
+  &--library {
+    bottom: 4px;
   }
 }
 
@@ -90,6 +103,39 @@
   margin-bottom: 10px;
 }
 
+.photo {
+  max-width: 360px;
+  max-height: 480px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+.video {
+  max-width: 360px;
+  max-height: 480px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+.library {
+  max-width: 100%;
+  max-height: 335px;
+  width: 100%;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.banner {
+  align-items: center;
+  max-width: 1160px;
+  width: 100%;
+}
+
+.activity {
+  padding-top: 50px;
+}
 
 .sponsors {
   margin: 50px 0;

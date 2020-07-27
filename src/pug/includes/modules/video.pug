@@ -1,3 +1,19 @@
-section.section.video-slider
+section.section.video
   h2.section__title ВИДЕО
-  .video__wrapper
+  .main__video-wrapper
+    .video__wrapper
+      .video__item
+        .video__content
+          .video__header
+            +image("content/video-1.jpg", "video-img")
+          .video__footer
+            .news__date.news__date--video 20.02.2020
+            .video__text
+              p  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti!
+            a.video__link(href="#") Перейти в галерею
+    a(href='#' role='button').video__buttons.video__left
+      +icon('arrow', 'video-arrow__icon video-arrow__icon--left')
+    a(href='#' role='button').video__buttons.video__right
+      +icon('arrow', 'video-arrow__icon video-arrow__icon--right')
+  .section__wrapper.section__wrapper--video
+

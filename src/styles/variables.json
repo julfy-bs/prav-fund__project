@@ -25,6 +25,8 @@
   "links-hover-color": "#2a87ce",
   "latest-news-background-color": "#fff",
   "latest-text-color": "#575756",
+  "photo-image-background-color": "#dce5ec",
+  "photo-content-background-color": "#fff",
   "text-color": "#000",
   "content-color": "#575756",
   "hover-color": "#2a87ce",

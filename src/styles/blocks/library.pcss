@@ -1,0 +1,159 @@
+.main__library-wrapper {
+  height: 100%;
+  background-color: $news-menu--active-background-color;
+  color: $news-content-color;
+  border-top: solid 5px $news-menu--active-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: translateY(-5px);
+  overflow: hidden;
+  padding: 40px 30px 30px;
+}
+
+.library__wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+  margin-bottom: 15px;
+}
+
+.library__buttons {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  z-index: 16;
+
+  &>.slider-arrow__icon {
+    &:hover {
+      stroke: $slider-buttons-hover-color;
+    }
+  }
+
+  @include phones {
+    top: 20%;
+  }
+}
+
+.library__left {
+  left: 30px;
+}
+
+.library__right {
+  right: 30px;
+}
+
+.library__buttons::before {
+  content: '';
+  position: absolute;
+  z-index: 15;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  width: 20px;
+  height: 40px;
+}
+
+.library-arrow__icon {
+  width: 10px;
+  height: 26px;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke: #a4a4a4;
+
+  &:hover {
+    stroke: $slider-buttons-hover-color;
+  }
+
+  &--right {
+    transform: rotate(180deg);
+  }
+}
+
+.library__item {
+  // margin-bottom: 1000px;
+  flex: 0 0 33%;
+  max-width: 33%;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #dce5ec;
+  max-height: 180px;
+  height: 100%;
+
+  &:first-child {
+    border-left: 1px solid transparent;
+  }
+}
+
+.library__header {
+  width: 100%;
+  max-height: 240px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.library__image {
+  max-width: 90px;
+  max-height: 130px;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.library__description {
+  color: #6f6f6e;
+  font-size: 13px;
+  padding-right: 40px;
+}
+
+.book__name {
+  color: #1f4b79;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.book__year {
+  margin-bottom: 5px;
+}
+
+.book__pages {
+  margin-bottom: 20px;
+}
+
+.book__download {
+  color: #1f4b79;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    background: svg-load('file_PDF_small.svg', fill=#5ba3d9, width=100%, height=100%) bottom center no-repeat;
+    width: 28px;
+    height: 35px;
+    padding-bottom: 4px;
+    margin-right: 10px;
+  }
+}
+
+.library__footer {
+  font-size: 14px;
+}
+
+.library__datе {
+  color: #808080;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.library__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 57px;
+  margin-bottom: 10px;
+
+}
+
+.library__link {
+  color: #1f4b79;
+  font-size: 14px;
+  text-decoration: none;
+}

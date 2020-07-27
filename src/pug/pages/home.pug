@@ -16,9 +16,16 @@ block content
         .row-wrapper.row-wrapper--section
           include ../includes/modules/links-section
         .row-wrapper
-        .column-wrapper.column-wrapper--main
-          include ../includes/modules/latest-news
-        .column-wrapper.column-wrapper--side
-          include ../includes/modules/position
-          include ../includes/modules/photo
-          include ../includes/modules/video
+          .column-wrapper.column-wrapper--main
+            include ../includes/modules/latest-news
+          .column-wrapper.column-wrapper--side
+            include ../includes/modules/position
+            include ../includes/modules/photo
+            include ../includes/modules/video
+        .row-wrapper
+          include ../includes/modules/library
+    .row-wrapper.banner-wrapper
+      include ../includes/modules/banner
+    .main__wrapper
+      .container
+          include ../includes/modules/activity
