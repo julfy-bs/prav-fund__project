@@ -1,14 +1,29 @@
 nav.menu
   .container.menu__container
     - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], []];
-      ul.menu__list
+      ul#horizontal-multilevel-menu.menu__list
         each item, index in menu[0]
           if index == 0
-            li.menu__item.menu__item--active
-              a.menu__link(href="#"+ menu[1][index]) #{item}
+            li
+              a.menu__link.root-item-selected(href="#"+ menu[1][index]) #{item}
+              ul 
+                li Новости
+                li.item-selected Статьи
+                li Мероприятия
+                li Медиа
+                li Библиотека
+
           else
-            li.menu__item
-              a.menu__link(href="#"+ menu[1][index]) #{item}
+            li
+              a.menu__link.root-item(href="#"+ menu[1][index]) #{item}
+              ul
+                li Новости
+                li.item-selected Статьи
+                li asdf
+                li Медиа
+                li Библиотека
+
+        
         //- Бургер-меню для планшетов и телефонов
     a.burger-menu#hamburger-menu-link(href="#")
       - var icons = ["menu"]
@@ -31,7 +46,7 @@ nav.menu
     nav.hamburger-menu#hamburger-menu
       .burger-header__menu
       - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], ['О грантах и субсидиях']];
-      ul.menu__list--hamburger
+      ul.menu__list--hamburger.menu-sitemap-tree
         each item, index in menu[0]
           li.menu__item.menu__item--hamburger
             a.menu__link(href="#") #{item}
