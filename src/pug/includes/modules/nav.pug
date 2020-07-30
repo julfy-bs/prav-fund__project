@@ -6,7 +6,7 @@ nav.menu
           if index == 0
             li
               a.menu__link.root-item-selected(href="#"+ menu[1][index]) #{item}
-              ul 
+              ul
                 li Новости
                 li.item-selected Статьи
                 li Мероприятия
@@ -23,7 +23,7 @@ nav.menu
                 li Медиа
                 li Библиотека
 
-        
+
         //- Бургер-меню для планшетов и телефонов
     a.burger-menu#hamburger-menu-link(href="#")
       - var icons = ["menu"]
@@ -44,12 +44,38 @@ nav.menu
             +icon(item, "search-icon")
 
     nav.hamburger-menu#hamburger-menu
-      .burger-header__menu
       - var menu = [['Главная', 'Фонд', 'Гранты и субсидии', 'Правозащитные центры', 'Мероприятия', 'Пресс-центр', 'Контакты'], ['О грантах и субсидиях']];
-      ul.menu__list--hamburger.menu-sitemap-tree
+      ul.menu__list--hamburger
         each item, index in menu[0]
-          li.menu__item.menu__item--hamburger
-            a.menu__link(href="#") #{item}
-            //- a.menu__semi-link(href="#") #{index}
+          if index == 0
+            li.menu__item.menu__item--hamburger.menu__item--displayed
+              div.menu__link
+                a #{item}
+              div.menu__semi-link
+                ul.menu__semi-list
+                  li
+                    a.menu__semi-main-link(href="#") Перейти на страницу
+                      ul
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+
+          else
+            li.menu__item.menu__item--hamburger
+              div.menu__link
+                a #{item}
+              div.menu__semi-link
+                ul.menu__semi-list
+                  li
+                    a.menu__semi-main-link(href="#") Перейти на страницу
+                      ul
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+                        li.menu__semi-item Нажми на меня
+
         a.close-button#close-nav-button(href="#")
           +icon('popUP-close', 'close-button__img', '20')

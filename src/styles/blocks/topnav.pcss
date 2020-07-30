@@ -2,6 +2,7 @@
   background-image: $menu-gradient;
   color: $menu-text-color;
   height: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +86,7 @@
   /*Sub-menu box*/
   & > ul {
     position: absolute;
-    top: 52px;
+    top: 53px;
     left: 0;
     display: none;
     z-index: 500;
@@ -99,7 +100,7 @@
       display: inline-block;
       text-align: left;
       padding-left: 30px;
-      border-bottom: 1px solid $nav-menu-item-border-color;
+      border-top: 1px solid $nav-menu-item-border-color;
       color: $nav-menu-item-item-text-color;
       & > a {
         text-decoration: none;
