@@ -1,18 +1,21 @@
 div.menu-sitemap-tree ul {
   list-style-type: none;
   margin: 0;
-  padding: 0 1em 0 0;
 }
 
 div.menu-sitemap-tree ul ul {
   width: auto;
   margin: -0.75em 0 0 0;
+  margin-bottom: 10px;
   padding: 0 0 0 0.75em;
 }
 
 div.menu-sitemap-tree > ul > li {
   font-size: 16px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 div.menu-sitemap-tree li {
@@ -30,19 +33,20 @@ div.menu-sitemap-tree li.menu-close ul {
 }
 
 div.menu-sitemap-tree div.item-text {
-  padding: 20px 0;
   position: relative;
   top: -19px;
   left: 19px;
   height: 50px;
+  display: flex;
+  align-items: center;
 }
 
-div.menu-sitemap-tree ul li ul div.item-text {
-  padding: 10px 0;
+div.menu-sitemap-tree ul li ul li div.item-text {
   position: relative;
   top: -19px;
   left: 19px;
   height: 40px;
+  margin-bottom: 10px;
 }
 
 div.folder {
@@ -50,41 +54,41 @@ div.folder {
 }
 
 div.menu-sitemap-tree li.menu-close div.folder {
-  position: absolute;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-left: 8px solid $nav-menu-item-item-text-color;
   border-bottom: 8px solid transparent;
   border-right: 0 solid transparent;
-  transform: rotate(90deg);
+  transform: translateY(90%) rotate(90deg);
   transition: 0.5s;
   display: block;
+
+  &:hover {
+    border-left: 8px solid $main-social-color;
+  }
 }
 
-div.menu-sitemap-tree li.menu-open div.folder {
-  position: absolute;
+div.menu-sitemap-tree li.menu-open > div.folder {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-left: 8px solid $nav-menu-item-item-text-color;
   border-bottom: 8px solid transparent;
   border-right: 0 solid transparent;
-  transform: rotate(0deg);
+  transform: translateY(90%) rotate(0deg);
   transition: 0.5s;
   display: block;
+
+  &:hover {
+    border-left: 8px solid $main-social-color;
+  }
 }
 
 div.menu-sitemap-tree ul {
   list-style-type: none;
   margin: 0;
   padding: 0 1em 0 0;
-}
-
-div.menu-sitemap-tree ul ul {
-  width: auto;
-  margin: -0.75em 0 0 0;
-  padding: 0 0 0 0.75em;
 }
 
 div.menu-sitemap-tree li {
@@ -108,36 +112,14 @@ div.menu-sitemap-tree li.menu-close ul {
 }
 
 /*Icons*/
+
 div.folder,
 div.page {
+  cursor: pointer;
   background-repeat: no-repeat;
-  width: 17px;
-  height: 17px;
-  vertical-align: top;
-}
-
-div.menu-sitemap-tree li.menu-close div.folder {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-left: 8px solid $nav-menu-item-item-text-color;
-  border-bottom: 8px solid transparent;
-  border-right: 0 solid transparent;
-  transform: rotate(0deg);
-  transition: 0.5s;
-  display: block;
+//width: 17px; //height: 17px; vertical-align: top;
 }
 
 div.page {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-left: 8px solid $nav-menu-item-item-text-color;
-  border-bottom: 8px solid transparent;
-  border-right: 0 solid transparent;
-  transform: rotate(0deg);
-  transition: 0.5s;
-  display: block;
+//position: absolute; //width: 0; //height: 0; //border-top: 8px solid transparent; //border-left: 8px solid $nav-menu-item-item-text-color; //border-bottom: 8px solid transparent; //border-right: 0 solid transparent; //transform: rotate(0deg); //transition: 0.5s; //display: block;
 }
