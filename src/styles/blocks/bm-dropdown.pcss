@@ -39,6 +39,10 @@ div.menu-sitemap-tree div.item-text {
   height: 50px;
   display: flex;
   align-items: center;
+
+  &:hover {
+    color: $nav-menu-item-hover-text-color;
+  }
 }
 
 div.menu-sitemap-tree ul li ul li div.item-text {
@@ -47,6 +51,10 @@ div.menu-sitemap-tree ul li ul li div.item-text {
   left: 19px;
   height: 40px;
   margin-bottom: 10px;
+
+  &:hover {
+    color: $nav-menu-item-hover-text-color;
+  }
 }
 
 div.folder {
@@ -109,6 +117,18 @@ div.menu-sitemap-tree li li {
 
 div.menu-sitemap-tree li.menu-close ul {
   display: none;
+}
+
+div.menu-sitemap-tree .item-text.active {
+  color: $nav-menu--active-color;
+
+  &:hover {
+    color: $nav-menu--active-color;
+  }
+
+  & > a {
+    cursor: default;
+  }
 }
 
 /*Icons*/
