@@ -55,7 +55,6 @@
   color: $nav-menu-item-text-color;
   cursor: pointer;
   position: relative;
-  max-height: 50px;
   &:last-child {
     margin: 0;
   }
@@ -113,6 +112,10 @@
 
       &:last-child {
         border-bottom: 4px solid #1f4b79;
+
+        a {
+          transform: translateY(-4px);
+        }
       }
     }
 

@@ -38,9 +38,10 @@ nav.menu
       .search#search-link
         label.search__block
           input(type="text" name="name" placeholder="" required).search__input
-        - var icons = ["search-icon"]
-        each item in icons
-          +icon(item, "search-icon")
+        .search-icon__block
+          - var icons = ["search-icon"]
+          each item in icons
+            +icon(item, "search-icon")
 
     nav#hamburger-menu.hamburger-menu
       .burger-header__menu

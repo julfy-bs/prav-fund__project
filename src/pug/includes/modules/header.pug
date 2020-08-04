@@ -9,9 +9,10 @@ header.header
             li.socials__item
               a(href="#").socials__link
                 +icon(item, "socials__icon")
-        .search#search-link
+        .search
           label.search__block
             input(type="text" name="name" placeholder="" required).search__input
           - var icons = ["search-icon"]
             each item in icons
               +icon(item, "search-icon")
+

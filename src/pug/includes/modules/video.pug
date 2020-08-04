@@ -6,11 +6,31 @@ section.section.video
         .video__content
           .video__header
             +image("content/video-1.jpg", "video-img")
+            a.video__play
           .video__footer
             .news__date.news__date--video 20.02.2020
             .video__text
               p  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti!
-            a.video__link(href="#") Перейти в галерею
+      .video__item
+        .video__content
+          .video__header
+            +image("content/video-1.jpg", "video-img")
+            a.video__play
+          .video__footer
+            .news__date.news__date--video 20.02.2020
+            .video__text
+              p  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti!
+      .video__item
+        .video__content
+          .video__header
+            +image("content/video-1.jpg", "video-img")
+            a.video__play
+          .video__footer
+            .news__date.news__date--video 20.02.2020
+            .video__text
+              p  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis praesentium harum quas, iusto consequuntur fugit aut perspiciatis consectetur corrupti!
+    .news__more
+      a.video__link(href="#") Перейти в галерею
     a(href='#' role='button').video__buttons.video__left
       +icon('arrow', 'video-arrow__icon video-arrow__icon--left')
     a(href='#' role='button').video__buttons.video__right
