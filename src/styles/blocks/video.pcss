@@ -21,7 +21,7 @@
   display: flex;
   z-index: 16;
 
-  &>.slider-arrow__icon {
+  & >.slider-arrow__icon {
     &:hover {
       stroke: $slider-buttons-hover-color;
     }
@@ -102,7 +102,7 @@
 }
 
 .video__footer {
-  padding: 30px;
+  padding: 25px 30px 10px;
   color: #1d1d1b;
   font-size: 14px;
 }
@@ -125,4 +125,9 @@
   color: #1f4b79;
   font-size: 14px;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $hover-color;
+  }
 }

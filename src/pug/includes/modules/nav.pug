@@ -35,9 +35,9 @@ nav.menu
           li.socials__item
             a(href="#").socials__link
               +icon(item, "socials__icon")
-      .search#search-link
+      form.search#search-link
         label.search__block
-          input(type="text" name="name" placeholder="" required).search__input
+          input(type="text" name="name" placeholder="" required).search__input#search-input
         .search-icon__block
           - var icons = ["search-icon"]
           each item in icons
