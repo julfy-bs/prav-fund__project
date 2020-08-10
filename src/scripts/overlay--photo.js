@@ -1,15 +1,24 @@
 const photoTrigger = document.querySelector('.photo__overlay');
 const videoTrigger = document.querySelector('.video__play');
+const formTrigger = document.querySelector('.button--banner');
 
 const template = document.querySelector("#overlayTemplate").innerHTML
 const overlay = createOverlay(template);
 
-photoTrigger.addEventListener("click", function () {
+photoTrigger.addEventListener("click", function (e) {
+	e.preventDefault();
 	overlay.open();
 	overlay.setContent("");
 });
 
-videoTrigger.addEventListener("click", function () {
+videoTrigger.addEventListener("click", function (e) {
+	e.preventDefault();
+	overlay.open();
+	overlay.setContent("");
+});
+
+formTrigger.addEventListener("click", function (e) {
+	e.preventDefault();
 	overlay.open();
 	overlay.setContent("");
 });
@@ -28,7 +37,8 @@ function createOverlay(template) {
 			closeElement.click();
 		}
 	});
-	closeElement.addEventListener("click", () => {
+	closeElement.addEventListener("click", (e) => {
+		e.preventDefault();
 		document.body.removeChild(overlayElement);
 		overlayElement.style.display = "none";
 		document.body.style.overflow = 'auto'
