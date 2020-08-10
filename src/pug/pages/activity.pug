@@ -1,0 +1,21 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Фонд поддержки и защиты прав соотечественников, проживающих за рубежом - Мероприятия'
+  - var pageClass = 'activity'
+
+block content
+  main.main-content
+    .main__wrapper
+      .container.main-container
+        .row-wrapper
+          include ../includes/modules/breadcrumbs
+        .row-wrapper
+          .column-wrapper.column-wrapper--main
+            include ../includes/modules/activityAll
+          .column-wrapper.column-wrapper--side
+            include ../includes/modules/news
+            include ../includes/modules/position
+            include ../includes/modules/photo
+            include ../includes/modules/video
+            include ../includes/modules/library

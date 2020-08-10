@@ -246,6 +246,11 @@
       padding: 0;
     }
   }
+
+  &--activity {
+    justify-content: flex-start;
+    margin: 0;
+  }
 }
 
 .time {
@@ -268,12 +273,25 @@
   color: #000000;
   font-size: 14px;
   font-weight: 500;
+
+  &--activity {
+    justify-content: flex-start;
+  }
 }
 
 .author {
   text-transform: uppercase;
   padding-left: 3px;
 
+}
+
+.announcement {
+  color: red;
+  text-transform: uppercase;
+  &:before {
+    content: ".";
+    opacity: 0;
+  }
 }
 
 .news-tags {

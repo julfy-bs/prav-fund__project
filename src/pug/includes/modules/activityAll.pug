@@ -1,0 +1,21 @@
+section.section.activity.activity--all
+  h2.section__title.section__title--page МЕРОПРИЯТИЯ ФОНДА И ПАРТНЁРОВ
+  .activity-wrapper
+    .activity__item
+      .activity-item__left
+        .news__image
+          +image("content/activity-image-1.png", "activity-img")
+        .activity__line
+      .activity-item__right
+        .news__date.news__date--timetable.news__date--activity
+          span.date 30.04.2020
+          span.announcement Анонс
+        .news__location.news__location--activity
+          span.location Миннеаполис, Швейцария
+        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+          ul.search-tags
+            each item, index in tags[0]
+              li.search-tags__item
+                a.search-tags__link(href="#") #{item}
+          a(href="#").news__text.news__text--activity
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!

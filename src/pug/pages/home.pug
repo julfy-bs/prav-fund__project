@@ -11,8 +11,11 @@ block content
         .row-wrapper
           include ../includes/modules/short
         .row-wrapper
-          include ../includes/modules/slider--main
-          include ../includes/modules/news
+          .column-wrapper.column-wrapper--main
+            include ../includes/modules/slider--main
+
+          .column-wrapper.column-wrapper--side
+            include ../includes/modules/news
         .row-wrapper.row-wrapper--section
           include ../includes/modules/links-section
         .row-wrapper
@@ -28,4 +31,4 @@ block content
       include ../includes/modules/banner
     .main__wrapper
       .container
-          include ../includes/modules/activity
+        include ../includes/modules/activityHome

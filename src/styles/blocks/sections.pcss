@@ -54,10 +54,8 @@
 }
 
 .slider {
-  width: 66%;
   padding-bottom: 12px;
   max-width: 760px;
-  margin-right: 40px;
   background-color: white;
 
   @include bigTablets {
@@ -73,11 +71,8 @@
 }
 
 .news {
-  width: 32%;
-  max-width: 360px;
   display: flex;
   flex-flow: column wrap;
-  height: 100%;
 
   @include bigTablets {
     display: none;
@@ -181,7 +176,14 @@
 
 .activity {
   padding-top: 50px;
+
+  &--all {
+    padding: 0;
+
+  //& .activity-item__left { //  order: 1; //} // //& .activity-item__center { //  order: 0; //} // //& .activity-item__right { //  order: 2; //}
+  }
 }
+
 
 .sponsors {
   margin: 50px 0;
