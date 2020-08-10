@@ -5,7 +5,6 @@ if (process.env.NODE_ENV === "development") {
 
 import "./scripts/burger-menu"
 import "./scripts/news-tabs"
-import "./scripts/slider--main"
 import "./scripts/slider--sponsors"
 import "./scripts/slider--photo"
 import "./scripts/slider--video"

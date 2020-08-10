@@ -111,7 +111,7 @@ module.exports = (env, argv) => {
 				chunks: ["home"]
 			}),
 			new HtmlWebpackPlugin({
-				template: "./src/pug/pages/activityHome.pug",
+				template: "./src/pug/pages/activity.pug",
 				chunks: ["activity"],
 				filename: "activity.html"
 			}),

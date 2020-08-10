@@ -1,0 +1,6 @@
+nav.nav-items
+  - var menu = [['Главная', 'Мероприятия'], ['#', '#']];
+  ul.nav-items__list
+    each item, index in menu[0]
+      li.nav-items__item
+        a.nav-items__link(href="#") #{item}

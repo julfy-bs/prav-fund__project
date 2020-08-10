@@ -286,8 +286,11 @@
 }
 
 .announcement {
-  color: red;
+  color: #f00f00;
+  font-size: 13px;
+  font-weight: 600;
   text-transform: uppercase;
+
   &:before {
     content: ".";
     opacity: 0;
@@ -330,5 +333,21 @@
   &--latest {
     margin: 0;
     padding: 0;
+  }
+}
+
+.news__link {
+  text-decoration: none;
+
+  &:hover {
+    color: #2a87ce;
+  }
+
+  & .img {
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.01);
+    }
   }
 }

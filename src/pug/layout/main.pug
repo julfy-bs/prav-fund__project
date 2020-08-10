@@ -16,3 +16,11 @@ html(lang="en")
       .content-wrapper
         block content
       include ../includes/modules/footer
+
+    script#overlayTemplate(type="template").
+      <div class="overlay">
+      <div class="container overlay__container">
+      <a class="overlay__close" href="#">x</a>
+      <div class="overlay__content"></div>
+      </div>
+      </div>
