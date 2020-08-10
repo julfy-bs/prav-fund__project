@@ -25,7 +25,7 @@
   transform: translateY(100%);
 
   &--links {
-    transform: translateY(100%) translateX(0);
+    transform: translateY(100%) translateX(-10%);
   }
 
   &--photo {
@@ -61,14 +61,14 @@
   background-color: white;
 
   @include bigTablets {
-    width: 80%;
+    width: 100%;
     margin: 0;
     margin-bottom: 50px;
+    max-width: 1160px;
   }
 
-  @include tablets {
-    width: 100%;
-    margin-bottom: 50px;
+  @include phones {
+    max-width: 480px;
   }
 }
 
@@ -82,8 +82,6 @@
   @include bigTablets {
     display: none;
   }
-
-
 }
 
 .links-section {
@@ -91,16 +89,30 @@
   flex-flow: row nowrap;
   justify-content: center;
   width: 100%;
+
+  @include tablets {
+    flex-flow: row wrap;
+    align-items: center;
+  }
 }
 
 .latest-news {
   max-width: 800px;
+
+  @include bigTablets {
+    max-width: 100%;
+  }
 }
 
 .position {
   max-width: 360px;
-  width: 360px;
+  width: 100%;
   margin-bottom: 10px;
+
+  @include bigTablets {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .photo {
@@ -108,6 +120,23 @@
   max-height: 480px;
   width: 100%;
   margin-bottom: 50px;
+
+  @include bigTablets {
+    margin-right: 40px;
+    max-height: none;
+    flex: 0 0 50%;
+    max-width: 46.82%;
+  }
+
+  @include tablets {
+    flex: 0 0 50%;
+    max-width: 45.82%;
+  }
+
+  @include phones {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 
@@ -116,6 +145,23 @@
   max-height: 480px;
   width: 100%;
   margin-bottom: 50px;
+
+  @include bigTablets {
+    max-height: none;
+    flex: 0 0 50%;
+    max-width: 46.82%;
+  }
+
+  @include tablets {
+    flex: 0 0 50%;
+    max-width: 45.82%;
+  }
+
+  @include phones {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
 }
 
 

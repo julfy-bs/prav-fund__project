@@ -13,6 +13,21 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include tablets {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 60%;
+    max-width: none;
+    min-height: 200px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include phones {
+    width: 80%;
+  }
 }
 
 .links-child__header {
@@ -24,6 +39,10 @@
   border-bottom: 1px solid #dce5ec;
   margin-bottom: 30px;
   position: relative;
+
+  @include tablets {
+    border: none;
+  }
 }
 
 .links-child__title {
@@ -40,6 +59,10 @@
 
 .links-child__content {
   padding-bottom: 40px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .links-child__list {
@@ -67,4 +90,8 @@
   &:hover {
     color: $links-hover-color;
   }
+}
+
+.icon-grants__image {
+  width: auto;
 }

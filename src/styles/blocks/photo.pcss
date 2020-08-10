@@ -28,7 +28,7 @@
   }
 
   @include phones {
-    top: 20%;
+    top: 30%;
   }
 }
 
@@ -80,6 +80,10 @@
   max-height: 240px;
   padding: 30px;
   background-color: $photo-image-background-color;
+
+  @include bigTablets {
+    max-height: none;
+  }
 }
 
 .photo__footer {
@@ -111,4 +115,8 @@
     text-decoration: underline;
     color: $hover-color;
   }
+}
+
+.photo-img {
+  width: 100%;
 }

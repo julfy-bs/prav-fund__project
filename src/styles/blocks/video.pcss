@@ -21,14 +21,8 @@
   display: flex;
   z-index: 16;
 
-  & >.slider-arrow__icon {
-    &:hover {
-      stroke: $slider-buttons-hover-color;
-    }
-  }
-
   @include phones {
-    top: 20%;
+    top: 30%;
   }
 }
 
@@ -48,6 +42,10 @@
   background-size: 100% 100%;
   width: 20px;
   height: 40px;
+
+  &:hover .video-arrow__icon {
+    stroke: $slider-buttons-hover-color;
+  }
 }
 
 .video-arrow__icon {
@@ -58,9 +56,9 @@
   stroke-width: 2px;
   stroke: #a4a4a4;
 
-  &:hover {
-    stroke: $slider-buttons-hover-color;
-  }
+  //&:hover {
+  //  stroke: $slider-buttons-hover-color;
+  //}
 
   &--right {
     transform: rotate(180deg);
@@ -81,6 +79,11 @@
   padding: 30px;
   background-color: $photo-image-background-color;
   position: relative;
+
+  @include bigTablets {
+    max-height: none;
+  }
+
 }
 
 .video__play {
@@ -130,4 +133,8 @@
     text-decoration: underline;
     color: $hover-color;
   }
+}
+
+.video-img {
+  width: 100%;
 }

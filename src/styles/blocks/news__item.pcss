@@ -41,9 +41,28 @@
     background-color: $latest-news-background-color;
     display: flex;
     flex-flow: column nowrap;
-    max-width: 360px;
     margin: 0 40px 40px 0;
-    max-height: 525px;
+    flex: 0 0 50%;
+    max-width: 46.82%;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    @include bigTablets {
+      flex: 0 0 50%;
+      max-width: 47.2%;
+    }
+
+    @include tablets {
+      flex: 0 0 50%;
+      max-width: 46%;
+    }
+
+    @include phones {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
 }
 
@@ -80,13 +99,24 @@
   &--position {
     display: flex;
     flex-flow: column nowrap;
-    max-width: 240px;
+    max-width: 60%;
     max-height: 120px;
+
+
+    @include bigTablets {
+      max-width: 70%;
+    }
+
+    @include tablets {
+      max-width: 55%;
+    }
   }
 }
+
 .test {
   display: block;
 }
+
 .news__text {
   display: flex;
   color: $news-content-color;
@@ -139,7 +169,7 @@
   color: $news-date-color;
   font-size: 13px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
 
   &--clock {
@@ -266,6 +296,17 @@
     padding: 0 0 0 140px;
     transform: translateY(-65px);
 
+    @include bigTablets {
+      transform: translate(-10%, -50px);
+    }
+
+    @include tablets {
+      transform: translate(15%, -50px);
+    }
+
+    @include phones {
+      transform: translate(10%, -20px);
+    }
   }
 
   &--latest {
