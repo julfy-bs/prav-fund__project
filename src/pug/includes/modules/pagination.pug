@@ -1,0 +1,28 @@
+.pagination
+  - var pages = [['Страница:', 'Назад', '1', '2', '3', '4', '5', '...', '135', 'Вперёд'], []];
+  ul.pagination__list
+    each item, index in pages[0]
+      if index == 0
+        li.pagination__item.pagination__item--pages #{item}
+      else if index == 1
+        li.pagination__item.pagination__item--arrow.pagination__item--disabled
+          a.pagination__link(href="#")
+            +icon("arrow", "pagination-arrow__icon")
+      else if index == 2
+        li.pagination__item.pagination__item--first
+          a.pagination__link(href="#") #{item}
+      else if index == 3
+        li.pagination__item.pagination__item--active
+          a.pagination__link(href="#") #{item}
+      else if index == 8
+        li.pagination__item.pagination__item--last
+          a.pagination__link(href="#") #{item}
+      else if index == 9
+        li.pagination__item.pagination__item--arrow
+          a.pagination__link(href="#")
+            +icon("arrow", "pagination-arrow__icon pagination-arrow__icon--right")
+
+      else
+        li.pagination__item.pagination__item--tablets
+          a.pagination__link(href="#") #{item}
+

@@ -10,6 +10,12 @@
   }
 }
 
+.pagination__wrapper--activity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .activity__item {
   display: flex;
   flex-flow: row nowrap;
@@ -29,6 +35,10 @@
 
   @include tablets {
     display: none;
+  }
+  
+  &--all {
+    display: inline-block;
   }
 
 }

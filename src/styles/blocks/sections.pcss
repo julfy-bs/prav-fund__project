@@ -19,6 +19,7 @@
     font-family: "Roboto Condensed";
     font-size: 40px;
     font-weight: 400;
+    text-transform: unset;
   }
 }
 
@@ -174,6 +175,14 @@
   width: 100%;
   margin-bottom: 70px;
   position: relative;
+
+  &--sidebar {
+    max-height: none;
+
+    @include bigTablets {
+      display: none;
+    }
+  }
 }
 
 .banner {
@@ -192,6 +201,11 @@
   }
 }
 
+.activity-news {
+  width: 100%;
+display: flex;
+  justify-content: center;
+}
 
 .sponsors {
   margin: 50px 0;
