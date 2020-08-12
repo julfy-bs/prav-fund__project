@@ -1,0 +1,16 @@
+section.section.article-slider
+  .main__wrapper--slider-main.main__wrapper--article-slider
+    .slider__wrapper
+      .slider__item
+        .slider__content
+          .slider__content_header
+            +image("content/slider__item-1.jpg", "img__slider--main")
+            .slider__content_left-shadow
+            .slider__content_right-shadow
+          .slider__content_footer.slider__content_footer--article-slider
+
+    a(href='#' role='button').slider__control.slider__control--article-slider.slider__control_left
+      +icon('arrow', 'slider-arrow__icon slider-arrow__icon--left')
+    a(href='#' role='button').slider__control.slider__control--article-slider.slider__control_right
+      +icon('arrow', 'slider-arrow__icon slider-arrow__icon--right')
+

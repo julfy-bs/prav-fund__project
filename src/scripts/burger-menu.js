@@ -2,7 +2,7 @@
 const hamburger = document.querySelector('#hamburger-menu-link');
 const nav = document.querySelector('#hamburger-menu');
 const closeNavButton = document.querySelector('#close-nav-button');
-const navLinks = nav.querySelectorAll('.menu__link');
+const navLinks = nav.querySelectorAll('.menu__semi-link');
 
 hamburger.addEventListener('click', e => {
   // e.preventDefault(); Переход по ссылке оставлен для того, чтобы пользователь не застрял в случае, когда не видно кнопки "Закрыть бургер меню" 

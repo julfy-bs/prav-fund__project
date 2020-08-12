@@ -9,11 +9,7 @@
 
   @include bigTablets {
     position: relative;
-    padding: 40px 18.5%;
-  }
-
-  @include phones {
-    padding: 40px 0 40px 25%;
+    padding: 2.5rem 0 2.5rem 25%;
   }
 }
 
@@ -70,6 +66,10 @@
 
 .executor__link {
   color: #aad2f0;
+
+  &:hover {
+    color: $hover-color;
+  }
 }
 
 .copytight__warning {
@@ -81,6 +81,14 @@
 .old-version {
   font-size: 13px;
   color: #aad2f0;
+}
+
+.politics__link,
+.old-version__link,
+.footer-links__link {
+  &:hover {
+    color: $hover-color;
+  }
 }
 
 .politics {

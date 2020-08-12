@@ -1,6 +1,6 @@
 header.header
   .container.header-container
-    a(href="#").header__left
+    a(href="./index.html").header__left
       +icon('header__logo', 'header-logo__img')
     .header__right
       - var icons = ["header__fb", "header__vk", "header__ok"];
@@ -9,9 +9,10 @@ header.header
             li.socials__item
               a(href="#").socials__link
                 +icon(item, "socials__icon")
-        .search#search-link
+        form.search
           label.search__block
             input(type="text" name="name" placeholder="" required).search__input
           - var icons = ["search-icon"]
             each item in icons
               +icon(item, "search-icon")
+

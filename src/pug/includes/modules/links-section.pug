@@ -9,7 +9,8 @@ section.section.links-section
         each item, index in menu[0]
           li.links-child__item
             a.links-child__link(href="#") #{item}
-    button.button.button--links 
+    form(action="#" target="_blank")
+      button.button.button--links Узнать больше
     .section__wrapper.section__wrapper--links
 
   .links-section__item.links-child
@@ -19,7 +20,8 @@ section.section.links-section
     .links-child__content
       .links-child__image
         +image('content/icon-map.png', 'icon-map__image')
-    button.button.button--links 
+    form(action="#" target="_blank")
+      button.button.button--links Узнать больше
     .section__wrapper.section__wrapper--links
 
   .links-section__item.links-child
@@ -32,7 +34,8 @@ section.section.links-section
         each item, index in menu[0]
           li.links-child__item
             a.links-child__link(href="#") #{item}
-    button.button.button--links 
+    form(action="#" target="_blank")
+      button.button.button--links Узнать больше
     .section__wrapper.section__wrapper--links
 
 

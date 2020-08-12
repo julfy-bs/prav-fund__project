@@ -54,7 +54,7 @@ var multiItemSlider = (function () {
         _config[key] = config[key];
       }
     }
-
+    
     _sliderItems.forEach(function (item, index) {
       _items.push({ item: item, position: index, transform: 0 });
     });
@@ -112,7 +112,7 @@ var multiItemSlider = (function () {
       if (!_isElementVisible(_mainElement)) {
         return;
       }
-      if (direction === 'right') {
+      if (direction === 'right') { 
         _positionLeftItem++;
         if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
           nextItem = position.getItemMin();

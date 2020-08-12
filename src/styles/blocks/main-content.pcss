@@ -1,3 +1,7 @@
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
 .main-content {
   background-color: $main-background-color;
 }
@@ -5,25 +9,51 @@
 .main__wrapper {
   background-image: url("~images/decoration/shadow-main.png");
   background-repeat: no-repeat;
-
-
 }
 
 .row-wrapper {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  // margin-bottom: 30px;
+// margin-bottom: 30px;
 
   &--section {
     justify-content: center;
   }
+
+  @include bigTablets {
+    flex-flow: row wrap;
+  }
 }
 
 .column-wrapper {
-  max-width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &--main {
+    width: 66%;
+    max-width: 760px;
+    @include bigTablets {
+      max-width: 100%;
+      width: 100%;
+    }
+
+  }
+
   &--side {
-    max-width: 30%;
+    width: 33%;
+    margin-left: 40px;
+    max-width: 360px;
+  }
+
+  @include bigTablets {
+    flex-flow: row wrap;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @include phones {
+    margin-left: 0;
   }
 }
 

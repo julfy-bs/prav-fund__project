@@ -1,108 +1,131 @@
 section.section.latest-news
   h2.section__title Свежие публикации
   .latest-news__wrapper
-    .news__item.latest-news__item
-      .news__image 
-        +image('content/latest-news__image-1.jpg', 'latest-news__image')
-      .news__content.news__content--latest
-        .news__date.news__date--pencil
-          span.date.date--slash 30.04.2020 
-          span.author АЛЕКСАНДР БРОД (РАПСИ) 
-        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-        ul.search-tags
-          each item, index in tags[0]
-            li.search-tags__item
-              a.search-tags__link(href="#") #{item}
-        .news__heading 
-          h3.news__title Lorem ipsum dolor sit amet.
-        .news__text.news__text--latest
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-      .section__wrapper.section__wrapper--latest
-    .news__item.latest-news__item
-      .news__image 
-        +image('content/latest-news__image-1.jpg', 'latest-news__image')
+    .news__item.news__item--latest
+      .news__image
+        a(href="#").news__link
+          +image('content/latest-news__image-1.jpg', 'img latest-news__image')
       .news__content.news__content--latest
         .news__date.news__date--pencil
           span.date.date--slash 30.04.2020
-          span.author АЛЕКСАНДР БРОД (РАПСИ) 
+          a(href="#").news__link
+            span.author АЛЕКСАНДР БРОД (РАПСИ)
         - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
         ul.search-tags
           each item, index in tags[0]
             li.search-tags__item
               a.search-tags__link(href="#") #{item}
-        .news__heading 
-          h3.news__title Lorem ipsum dolor sit amet.
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
         .news__text.news__text--latest
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
       .section__wrapper.section__wrapper--latest
-    .news__item.latest-news__item
-      .news__image 
-        +image('content/latest-news__image-1.jpg', 'latest-news__image')
+    .news__item.news__item--latest
+      .news__image
+        a(href="#").news__link
+          +image('content/latest-news__image-1.jpg', 'img latest-news__image')
       .news__content.news__content--latest
         .news__date.news__date--pencil
           span.date.date--slash 30.04.2020
-          span.author АЛЕКСАНДР БРОД (РАПСИ) 
+          a(href="#").news__link
+            span.author АЛЕКСАНДР БРОД (РАПСИ)
         - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
         ul.search-tags
           each item, index in tags[0]
             li.search-tags__item
               a.search-tags__link(href="#") #{item}
-        .news__heading 
-          h3.news__title Lorem ipsum dolor sit amet.
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
         .news__text.news__text--latest
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
       .section__wrapper.section__wrapper--latest
-    .news__item.latest-news__item
-      .news__image 
-        +image('content/latest-news__image-1.jpg', 'latest-news__image')
+    .news__item.news__item--latest
+      .news__image
+        a(href="#").news__link
+          +image('content/latest-news__image-1.jpg', 'img latest-news__image')
       .news__content.news__content--latest
         .news__date.news__date--pencil
           span.date.date--slash 30.04.2020
-          span.author АЛЕКСАНДР БРОД (РАПСИ) 
+          a(href="#").news__link
+            span.author АЛЕКСАНДР БРОД (РАПСИ)
         - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
         ul.search-tags
           each item, index in tags[0]
             li.search-tags__item
               a.search-tags__link(href="#") #{item}
-        .news__heading 
-          h3.news__title Lorem ipsum dolor sit amet.
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
         .news__text.news__text--latest
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
       .section__wrapper.section__wrapper--latest
-    .news__item.latest-news__item
-      .news__image 
-        +image('content/latest-news__image-1.jpg', 'latest-news__image')
+    .news__item.news__item--latest
+      .news__image
+        a(href="#").news__link
+          +image('content/latest-news__image-1.jpg', 'img latest-news__image')
       .news__content.news__content--latest
         .news__date.news__date--pencil
           span.date.date--slash 30.04.2020
-          span.author АЛЕКСАНДР БРОД (РАПСИ) 
+          a(href="#").news__link
+            span.author АЛЕКСАНДР БРОД (РАПСИ)
         - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
         ul.search-tags
           each item, index in tags[0]
             li.search-tags__item
               a.search-tags__link(href="#") #{item}
-        .news__heading 
-          h3.news__title Lorem ipsum dolor sit amet.
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
         .news__text.news__text--latest
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
       .section__wrapper.section__wrapper--latest
-    .news__item.latest-news__item
-      .news__image 
-        +image('content/latest-news__image-1.jpg', 'latest-news__image')
+    .news__item.news__item--latest
+      .news__image
+        a(href="#").news__link
+          +image('content/latest-news__image-1.jpg', 'img latest-news__image')
       .news__content.news__content--latest
         .news__date.news__date--pencil
           span.date.date--slash 30.04.2020
-          span.author АЛЕКСАНДР БРОД (РАПСИ) 
+          a(href="#").news__link
+            span.author АЛЕКСАНДР БРОД (РАПСИ)
         - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
         ul.search-tags
           each item, index in tags[0]
             li.search-tags__item
               a.search-tags__link(href="#") #{item}
-        .news__heading 
-          h3.news__title Lorem ipsum dolor sit amet.
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
         .news__text.news__text--latest
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
+      .section__wrapper.section__wrapper--latest
+    .news__item.news__item--latest
+      .news__image
+        a(href="#").news__link
+          +image('content/latest-news__image-1.jpg', 'img latest-news__image')
+      .news__content.news__content--latest
+        .news__date.news__date--pencil
+          span.date.date--slash 30.04.2020
+          a(href="#").news__link
+            span.author АЛЕКСАНДР БРОД (РАПСИ)
+        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+        ul.search-tags
+          each item, index in tags[0]
+            li.search-tags__item
+              a.search-tags__link(href="#") #{item}
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
+        .news__text.news__text--latest
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
       .section__wrapper.section__wrapper--latest
 
 
-  

@@ -1,29 +1,26 @@
 .close-button {
-position: absolute;
-top: 54px;
-left: 65px;
-background: transparent;
-z-index: 150;
-height: 35px;
-width: 35px;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  background: transparent;
+  z-index: 150;
+  height: 35px;
+  width: 35px;
 
-
-@include phones {
-  left: 1%;
-  top: 1%;
-}
-
+  @include phones {
+    top: 50px;
+    right: 40px;
+  }
 }
 
 .close-button__img {
-fill: none;
-fill: $close-svg-color;
-stroke: #fff;
-stroke-miterlimit: 10;
-stroke-width: 1.3px;
+  fill: none;
+  fill: $close-svg-color;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 1.3px;
 
-
-&:hover {
-  fill: $hover-color;
-}
+  &:hover {
+    fill: $hover-color;
+  }
 }

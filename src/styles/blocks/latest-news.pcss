@@ -1,16 +1,15 @@
 .latest-news__wrapper {
   display: flex;
   flex-flow: row wrap;
-  
+  justify-content: flex-start;
+  width: 100%;
+
+  //@include bigTablets {
+  //  justify-content: space-between;
+  //}
 }
 
-.latest-news__item {
-  background-color: $latest-news-background-color;
-  display: flex;
-  flex-flow: column nowrap;
-  max-width: 360px;
-  margin: 0 40px 40px 0;
-  overflow: hidden;
-  max-height: 525px;
 
+.latest-news__image {
+  width: 100%;
 }

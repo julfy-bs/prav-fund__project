@@ -1,8 +1,7 @@
 .news__wrapper {
   background-color: $news-background-color;
   position: relative;
-  // max-height: 600px;
-  height: 86%;
+  min-height: 615px;
 }
 
 .is-active {
@@ -25,8 +24,8 @@
 .tab {
   display: none;
 
-  >.news__item {
-    
+  > .news__item {
+
     &:nth-child(n+4) {
       display: none;
     }
@@ -34,7 +33,7 @@
 }
 
 .tabs__content {
-  >.is-active {
+  > .is-active {
     display: block;
     padding: 0;
     border: none;

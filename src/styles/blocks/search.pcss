@@ -22,8 +22,40 @@
 .search-icon {
   width: 40px;
   fill: $main-social-color;
+  position: relative;
 
   &:hover {
     fill: $hover-color;
+  }
+
+
+  @include phones {
+    margin-top: 4px;
+  }
+}
+
+.search {
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  height: 100%;
+  max-width: 500px;
+
+  align-items: center;
+  position: relative;
+}
+
+.focus__search--active {
+  padding: 0;
+
+  & .header__socials {
+    display: none;
+  }
+
+  & .search {
+    & .search__block {
+      & .search__input {
+        display: block;
+      }
+    }
   }
 }
