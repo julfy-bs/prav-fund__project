@@ -13,50 +13,18 @@ section.section.activity.activity--home
             +image("content/activity-image-1.png", "img activity-img")
         .activity__line
       .activity-item__right
-        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-          ul.search-tags
-            each item, index in tags[0]
-              li.search-tags__item
-                a.search-tags__link(href="#") #{item}
-          a(href="#").news__text.news__text--activity
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-    .activity__item
-      .activity-item__left
-        .news__date.news__date--timetable
-          span.date 30.04.2020
-        .news__location
-          span.location Миннеаполис, Швейцария
-      .activity-item__center
-        .news__image.news__image--activity
+        .news__heading
           a(href="#").news__link
-            +image("content/activity-image-1.png", "img activity-img")
-        .activity__line
-      .activity-item__right
-        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-          ul.search-tags
-            each item, index in tags[0]
-              li.search-tags__item
-                a.search-tags__link(href="#") #{item}
-          a(href="#").news__text.news__text--activity
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-    .activity__item
-      .activity-item__left
-        .news__date.news__date--timetable
+            h3.news__title Lorem ipsum dolor sit amet.
+        .news__date.news__date--timetable.news__date--activity.news__date--home
           span.date 30.04.2020
-        .news__location
+          span.announcement Анонс
+        .news__location.news__location--activity.news__location--home
           span.location Миннеаполис, Швейцария
-      .activity-item__center
-        .news__image.news__image--activity
+
+        .news__text.news__text--activity
           a(href="#").news__link
-            +image("content/activity-image-1.png", "img activity-img")
-        .activity__line
-      .activity-item__right
-        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-          ul.search-tags
-            each item, index in tags[0]
-              li.search-tags__item
-                a.search-tags__link(href="#") #{item}
-          a(href="#").news__text.news__text--activity
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
-  .news__more.news__more--activity
-    a(href="#").news-more__link Все мероприятия
+
+    .news__more.news__more--activity
+      a(href="#").news-more__link Все мероприятия

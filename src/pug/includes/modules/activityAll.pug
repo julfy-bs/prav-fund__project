@@ -13,14 +13,12 @@ section.section.activity.activity--all
           span.announcement Анонс
         .news__location.news__location--activity
           span.location Миннеаполис, Швейцария
-        - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
-          ul.search-tags
-            each item, index in tags[0]
-              li.search-tags__item
-                a.search-tags__link(href="#") #{item}
-          div.news__text.news__text--activity
-            a(href="#").news__link
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+        .news__heading
+          a(href="#").news__link
+            h3.news__title Lorem ipsum dolor sit amet.
+        .news__text.news__text--activity
+          a(href="#").news__link
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
 
   .pagination__wrapper.pagination__wrapper--activity
     include ./pagination

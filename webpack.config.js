@@ -79,7 +79,8 @@ module.exports = (env, argv) => {
 	const config = {
 		entry: {
 			home: "./src/main__home.js",
-			activity: "./src/main__activity.js"
+			activity: "./src/main__activity.js",
+			activityPage: "./src/main__activityPage.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -114,6 +115,11 @@ module.exports = (env, argv) => {
 				template: "./src/pug/pages/activity.pug",
 				chunks: ["activity"],
 				filename: "activity.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/activityPage.pug",
+				chunks: ["activityPage"],
+				filename: "activityPage.html"
 			}),
 			new SpriteLoaderPlugin({ plainSprite: true }),
 			new VueLoaderPlugin()

@@ -1,0 +1,19 @@
+section.section.activity.activity--item
+  h2.section__title.section__title--page.section__title--activity-item Вручение Спецприза Института Русского зарубежья присужден материалу «Первая Балканская конференция по защите прав соотечественников»
+  .activity-wrapper.activity-wrapper--item
+    article.activity__item.activity__item--item
+      .activity-item__header.activity-item-header
+        .activity-item-header__top
+          .news__date.news__date--timetable.news__date--activity
+            span.date 30.04.2020
+            span.announcement Анонс
+        .activity-item-header__bottom
+          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+            ul.search-tags
+              each item, index in tags[0]
+                li.search-tags__item
+                  a.search-tags__link(href="#") #{item}
+            .print__link
+      .activity-item__main.activity-item-main
+        .activity-item-main__header
+          //include ./articleSlider
