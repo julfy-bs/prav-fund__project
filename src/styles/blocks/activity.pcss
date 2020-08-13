@@ -48,10 +48,6 @@
   margin-bottom: 40px;
 }
 
-.activity-item__main {
-
-}
-
 .activity-item-header__bottom {
   display: flex;
   justify-content: space-between;
@@ -62,6 +58,83 @@
     margin: 0;
   }
 }
+
+
+.activity-item__main {
+  width: 100%;
+
+}
+
+.activity-item-main__header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 45px;
+
+  @include tablets {
+    flex-direction: column-reverse;
+  }
+
+  .ya-share2 {
+
+    @include tablets {
+      margin-bottom: 30px;
+    }
+
+    & .ya-share2__badge {
+      width: 40px;
+      height: 41px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    & .ya-share2__title {
+      display: none;
+    }
+
+    & .ya-share2__container_size_m .ya-share2__icon {
+      height: 40px;
+      width: 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    & .ya-share2__list_direction_vertical  {
+
+      @include tablets {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+      }
+
+      & .ya-share2__item {
+        margin: 0 0 10px 0;
+        @include tablets {
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.activity-item-main__footer {
+  margin-top: 30px;
+}
+
+.activity-item-main-footer__top {
+  border-bottom: 1px solid #cbcbcb;
+  border-top: 1px solid #cbcbcb;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.activity-item-main-footer__bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 .activity-item__left {
   margin-top: 20px;
@@ -81,9 +154,7 @@
 
 .activity-item__center {
   margin-right: 35px;
-//width: 111px; //height: 111px; //border-radius: 50%; //overflow: hidden; display: flex; flex-flow: column wrap; align-items: center;
-  justify-content: center;
-  order: 1;
+//width: 111px; //height: 111px; //border-radius: 50%; //overflow: hidden; display: flex; flex-flow: column wrap; align-items: center; justify-content: center; order: 1;
 }
 
 .activity-item__right {

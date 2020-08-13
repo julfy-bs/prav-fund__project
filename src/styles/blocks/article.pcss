@@ -1,3 +1,49 @@
-.article__title {
+.article {
+  font-size: 16px;
+  color: #575756;
 
+  & p {
+    &:first-child {
+      color: #000000;
+    }
+  }
+
+  & img {
+    margin: 0 30px 30px 0;
+    max-width: 300px;
+    max-height: 180px;
+    height: auto;
+
+    @include phones {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: auto;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  & a {
+    color: #1f4b79;
+    text-decoration: none;
+
+    &:hover {
+      color: #2a87ce;
+    }
+  }
+
+  &__link {
+    color: #1f4b79;
+
+    &:hover {
+      color: #2a87ce;
+    }
+
+    &--main {
+      &:before {
+        content: "<";
+        margin-right: 5px;
+      }
+    }
+  }
 }
