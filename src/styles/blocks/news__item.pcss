@@ -182,6 +182,24 @@
     overflow: hidden;
     background-position: center center;
   }
+
+  &--activity-item {
+    width: 100%;
+    max-width: 580px;
+    max-height: 350px;
+    background-position: center center;
+    border-top: solid 5px $news-menu--active-color;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+
+    @include bigTablets {
+      max-width: 80%;
+    }
+
+    @include tablets {
+      max-width: 100%;
+    }
+  }
 }
 
 .news__date {
