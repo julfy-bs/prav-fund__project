@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
 			{
 				loader: "svgo-loader",
 				options: {
-					plugins: [{ removeTitle: true }, { removeAttrs: false }]
+					plugins: [{removeTitle: true}, {removeAttrs: false}]
 				}
 			}
 		]
@@ -80,7 +80,8 @@ module.exports = (env, argv) => {
 		entry: {
 			home: "./src/main__home.js",
 			activity: "./src/main__activity.js",
-			activityPage: "./src/main__activityPage.js"
+			activityPage: "./src/main__activityPage.js",
+			fund: "./src/main__fund.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -121,7 +122,12 @@ module.exports = (env, argv) => {
 				chunks: ["activityPage"],
 				filename: "activityPage.html"
 			}),
-			new SpriteLoaderPlugin({ plainSprite: true }),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fund.pug",
+				chunks: ["fund"],
+				filename: "fund.html"
+			}),
+			new SpriteLoaderPlugin({plainSprite: true}),
 			new VueLoaderPlugin()
 		],
 		devtool: "#eval-source-map"

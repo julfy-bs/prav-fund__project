@@ -1,0 +1,44 @@
+#right-menu {
+  background-color: #ffffff;
+  color: #1f4b79;
+
+  @include bigTablets {
+    display: none;
+  }
+
+  & li {
+    height: 51px;
+    text-align: left;
+    border-top: 1px solid $nav-menu-item-border-color;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:hover {
+      color: $nav-menu-item-hover-text-color;
+    }
+  }
+
+  & .root-item-selected {
+    background-color: $nav-menu--active-color;
+    border-bottom: 1px solid $nav-menu--active-color;
+    color: $text-color;
+
+    &:hover {
+      background-color: $nav-menu--active-color;
+      cursor: default;
+      color: $nav-menu-item-text-color;
+    }
+  }
+}
