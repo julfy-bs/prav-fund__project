@@ -1,0 +1,40 @@
+.tags-sidebar__wrapper {
+
+
+}
+
+.tags-sidebar__list {
+  font-family: "Open Sans";
+  font-size: 13px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.tags-sidebar__item {
+  color: #1f4b79;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $hover-color;
+    border: 1px solid $hover-color;
+  }
+
+  &--active {
+    border: 1px solid transparent;
+    background-color: #ffaa02;
+    color: #000000;
+
+    &:hover {
+      color: white;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.tags-sidebar__link {
+  text-decoration: none;
+}
