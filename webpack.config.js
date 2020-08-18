@@ -84,7 +84,11 @@ module.exports = (env, argv) => {
 			fund: "./src/main__fund.js",
 			fundPolitics: "./src/main__fundPolitics.js",
 			fundDocuments: "./src/main__fundDocuments.js",
-			fundDocumentsAll: "./src/main__fundDocumentsAll.js"
+			fundDocumentsAll: "./src/main__fundDocumentsAll.js",
+			fundDirectorateExecutive: "./src/main__fundDirectorateExecutive.js",
+			fundDirectorateTrust: "./src/main__fundDirectorateTrust.js",
+			fundDirectoratePage: "./src/main__fundDirectoratePage.js"
+
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -144,6 +148,21 @@ module.exports = (env, argv) => {
 				template: "./src/pug/pages/fundDocuments.pug",
 				chunks: ["fundDocuments"],
 				filename: "fundDocuments.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDirectorateExecutive.pug",
+				chunks: ["fundDirectorateExecutive"],
+				filename: "fundDirectorateExecutive.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDirectorateTrust.pug",
+				chunks: ["fundDirectorateTrust"],
+				filename: "fundDirectorateTrust.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDirectoratePage.pug",
+				chunks: ["fundDirectoratePage"],
+				filename: "fundDirectoratePage.html"
 			}),
 			new SpriteLoaderPlugin({plainSprite: true}),
 			new VueLoaderPlugin()

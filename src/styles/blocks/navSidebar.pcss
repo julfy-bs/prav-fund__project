@@ -1,10 +1,14 @@
+.nav__sidebar {
+  @include bigTablets {
+    display: none;
+  }
+}
+
 #right-menu {
   background-color: #ffffff;
   color: #1f4b79;
 
-  @include bigTablets {
-    display: none;
-  }
+
 
   & li {
     height: 51px;
