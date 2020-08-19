@@ -1,0 +1,30 @@
+.projects-main__wrapper {
+  overflow: hidden;
+  margin-right: -80px;
+
+  @include tablets {
+    flex: 0 0 50%;
+    max-width: calc(100%/2 - 40px);
+  }
+
+  @include phones {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.projects__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+
+//@include bigTablets {
+//  justify-content: space-between;
+//}
+}
+
+
+.project__image {
+  width: 100%;
+}

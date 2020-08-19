@@ -65,6 +65,29 @@
     }
   }
 
+  &--project {
+    background-color: $latest-news-background-color;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 40px 40px 0;
+    flex: 0 0 27%;
+    max-width: 27%;
+
+    @include tablets {
+      flex: 0 0 50%;
+      max-width: calc(100% / 2 - 40px);
+    }
+
+    @include phones {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    &--faq {
+      padding: 0 20px;
+    }
+  }
+
   &--activity-news {
     max-width: 100%;
     margin: 0 20px;
@@ -75,6 +98,58 @@
     }
 
   }
+
+  &--faq {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    background: white;
+    margin-bottom: 12px;
+
+    & .news__content--faq {
+      display: none;
+    }
+
+    & .news__open {
+      &:before {
+        content: '';
+        display: inline-block;
+        background: svg-load('grants__open.svg', width=100%, height=100%) bottom center no-repeat;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &--open {
+
+    .news__heading--faq {
+      color: $text-color;
+    }
+
+    & .news__content--faq {
+      display: flex;
+    }
+
+    & .news__open {
+      &:before {
+        content: '';
+        display: inline-block;
+        background: svg-load('grants__close.svg', width=100%, height=100%) bottom center no-repeat;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.news__header {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .news__heading {
@@ -82,6 +157,15 @@
   font-size: 16px;
   color: $text-color;
   margin-bottom: 8px;
+
+  &--project {
+    font-size: 14px;
+  }
+
+  &--faq {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .news__content {
@@ -122,6 +206,15 @@
       max-width: 55%;
     }
   }
+
+  &--project {
+    padding: 20px 20px 40px;
+    flex-flow: column nowrap;
+  }
+
+  &--faq {
+
+  }
 }
 
 .test {
@@ -161,6 +254,12 @@
     flex-direction: column;
     overflow: auto;
     text-overflow: inherit;
+  }
+
+  &--faq {
+    color: #6f6f6e;
+    font-size: 16px;
+  //padding: 20px 30px;
   }
 }
 
@@ -371,6 +470,21 @@
   text-transform: uppercase;
   padding-left: 3px;
 
+  &--project {
+    display: none;
+  }
+}
+
+.news__open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--faq {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .announcement {
