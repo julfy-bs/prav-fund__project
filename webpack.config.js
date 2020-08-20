@@ -88,7 +88,8 @@ module.exports = (env, argv) => {
 			fundDirectorateExecutive: "./src/main__fundDirectorateExecutive.js",
 			fundDirectorateTrust: "./src/main__fundDirectorateTrust.js",
 			fundDirectoratePage: "./src/main__fundDirectoratePage.js",
-			grantsAbout: "./src/main__grantsAbout.js"
+			grantsAbout: "./src/main__grantsAbout.js",
+			grantsText: "./src/main__grantsText.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -168,6 +169,11 @@ module.exports = (env, argv) => {
 				template: "./src/pug/pages/grantsAbout.pug",
 				chunks: ["grantsAbout"],
 				filename: "grantsAbout.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/grantsText.pug",
+				chunks: ["grantsText"],
+				filename: "grantsText.html"
 			}),
 			new SpriteLoaderPlugin({plainSprite: true}),
 			new VueLoaderPlugin()
