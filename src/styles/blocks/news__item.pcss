@@ -107,6 +107,10 @@
     background: white;
     margin-bottom: 12px;
 
+    & .news__heading--faq {
+      color: #808080;
+    }
+
     & .news__content--faq {
       display: none;
     }
@@ -124,8 +128,8 @@
 
   &--open {
 
-    .news__heading--faq {
-      color: $text-color;
+    & .news__heading--faq {
+      color: black;
     }
 
     & .news__content--faq {
@@ -165,6 +169,10 @@
   &--faq {
     margin: 0;
     padding: 0;
+  }
+
+  &--request-status {
+    margin-bottom: 25px;
   }
 }
 
@@ -259,7 +267,22 @@
   &--faq {
     color: #6f6f6e;
     font-size: 16px;
-  //padding: 20px 30px;
+    padding: 10px 30px 0 0;
+
+    &:before {
+      content: "—";
+      padding: 0 12px 0 0;
+    }
+  }
+}
+
+.news__title {
+
+  &--request-status {
+    color: #1d1d1b;
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 
