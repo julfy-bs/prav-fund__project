@@ -1,15 +1,67 @@
 .request-status__content-wrapper {
   padding-bottom: 30px;
   border-bottom: 1px solid #dde6ed;
+  margin-bottom: 45px;
 }
 
-.form--request-status {
+.form__row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   color: #575756;
+
+  @include bigTablets {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  @include tablets {
+    flex-flow: row wrap;
+  }
+}
+
+.form__block {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
   margin-bottom: 45px;
+
+  &--code {
+    max-width: 150px;
+
+    @include tablets {
+      max-width: none;
+    }
+  }
+
+  &--name {
+    max-width: 270px;
+
+    @include tablets {
+      max-width: none;
+    }
+  }
+
+  &--select {
+    max-width: 320px;
+
+    @include tablets {
+      max-width: none;
+    }
+  }
+
+  &--search {
+    max-width: 50px;
+    max-height: 50px;
+    padding: 0;
+  }
+
+  @include tablets {
+    margin-bottom: 35px;
+  }
 }
 
 .request-status__input {
@@ -17,17 +69,37 @@
   color: #808080;
   font-size: 16px;
   border: none;
-  padding: 13px 20px;
+  padding: 13px 0 13px 20px;
   height: 50px;
   width: 100%;
+  margin-right: 20px;
 
   &--code {
     max-width: 110px;
+    margin-right: 0;
+
+    @include tablets {
+      max-width: none;
+    }
   }
 
   &--name {
-    min-width: 260px;
+    max-width: 270px;
+
+    @include tablets {
+      max-width: none;
+    }
   }
+
+  &:focus {
+    outline-color: #40aaf0;
+  }
+
+  @include tablets {
+    max-width: none;
+    margin-right: 0;
+  }
+
 }
 
 .select__list {
@@ -35,10 +107,20 @@
   color: #808080;
   font-size: 16px;
   border: none;
-  margin-right: 15px;
   padding: 13px 20px;
   height: 50px;
   width: 260px;
+  max-width: 250px;
+  margin-right: 20px;
+
+  &:focus {
+    outline-color: #40aaf0;
+  }
+
+  @include tablets {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .select__item {
@@ -49,15 +131,6 @@
   height: 30px;
   padding: 4px 20px;
 
-  &:checked {
-    &:before {
-      content: '';
-      display: inline-block;
-      background: svg-load('grants__list-mark.svg', width=100%, height=100%) bottom center no-repeat;
-      width: 11px;
-      height: 13px;
-    }
-  }
 }
 
 .request-status__list {
@@ -101,5 +174,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 20px;
+}
+
+.request-status__span {
+  padding: 0 20px 0 20px;
 }

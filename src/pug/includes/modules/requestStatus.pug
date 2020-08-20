@@ -1,59 +1,13 @@
 section.section.request-status
   h1.section__title Статус заявки
   .request-status__wrapper
-    .news__heading.news__heading--request-status
-      h2.news__title.news__title--request-status Поиск заявки
-    form.form.form--request-status
-      label.label
-        input(type="text" placeholder="Код*").request-status__input.request-status__input--code
-      span.request-status__span или
-      label.label
-        input(type="text" placeholder="Наименование соискателя*").request-status__input.request-status__input--name
-      label.label
-        select(placeholder="Выбрать статус").request-status__select-list.select__list
-          option(value="none" hidden="").select__item Выбрать статус
-          option(value="1").select__item Все
-          option(value="2").select__item Заявка поступила
-          option(value="3").select__item На рассмотрении
-          option(value="4").select__item Поддержано
-          option(value="5").select__item Поддержано с оговорками
-          option(value="6").select__item Отложить
-          option(value="7").select__item Не поддерживать / Отклонить
-          option(value="8").select__item Заявка отозвана
-          option(value="9").select__item Не принято к рассмотрению
+    include ./grantsForm
+    include ./grantsStatus
+    include ./grantsRequestStatus
 
-      label.search__block
-        //input(type="text" name="name" placeholder="" required).search__input.search__input--request-status
-      - var icons = ["search-icon"]
-      each item in icons
-        +icon(item, "search-icon search-icon--request-status")
-    .news__heading.news__heading--request-status
-      h2.news__title.news__title--request-status Статус заявки
-    .request-status__content-wrapper
-      .request-status__list
-        .request-status__item.request
-          .request__date
-            p 2019/II-300
-          .request__name
-            p Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии
-          .request__status
-            p На рассмотрении
-        .request-status__item.request
-          .request__date
-            p 2019/II-300
-          .request__name
-            p Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии
-          .request__status
-            p На рассмотрении
-        .request-status__item.request
-          .request__date
-            p 2019/II-300
-          .request__name
-            p Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии2019/II-300  Фонд "Устойчивое развитии
-          .request__status
-            p На рассмотрении
-      .pagination__wrapper.pagination__wrapper--activity
-        include ./pagination
+
+
+
 
 
 
