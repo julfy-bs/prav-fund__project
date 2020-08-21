@@ -17,6 +17,10 @@
   @include phones {
     display: none;
   }
+
+  &--request-status {
+    display: none;
+  }
 }
 
 .search-icon {
@@ -31,6 +35,15 @@
 
   @include phones {
     margin-top: 4px;
+  }
+
+  &--request-status {
+    width: 50px;
+
+    @include phones {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 

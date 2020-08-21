@@ -3,6 +3,7 @@
   margin-bottom: 50px;
   position: relative;
   flex-flow: column;
+  width: 100%;
 }
 
 .section__title {
@@ -16,14 +17,28 @@
 
   &--page {
     color: #1d1d1b;
-    font-family: "Roboto Condensed";
     font-size: 40px;
-    font-weight: 400;
     text-transform: unset;
   }
 
   &--activity-item {
     margin-bottom: 10px;
+  }
+
+  &--fund {
+    margin-bottom: 10px;
+  }
+
+  &--fund-documents {
+    margin-bottom: 14px;
+  }
+
+  &--reports {
+    font-size: 20px;
+  }
+
+  &--props {
+    font-size: 20px;
   }
 }
 
@@ -69,7 +84,7 @@
   padding-bottom: 12px;
   max-width: 760px;
   background-color: white;
-  //min-height: 665px;
+//min-height: 665px;
 
   @include bigTablets {
     width: 100%;
@@ -109,6 +124,14 @@
 
   @include bigTablets {
     max-width: 100%;
+  }
+}
+
+.projects {
+  max-width: 100%;
+
+  @include bigTablets {
+
   }
 }
 
@@ -196,8 +219,7 @@
 }
 
 .activity {
-  //padding-top: 50px;
-  position: relative;
+//padding-top: 50px; position: relative;
 
   &--all {
     padding: 0;
@@ -208,7 +230,7 @@
 
 .activity-news {
   width: 100%;
-display: flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -222,4 +244,10 @@ display: flex;
 
 .footer {
   flex-shrink: 0;
+}
+
+.nav__sidebar {
+  @include bigTablets {
+    display: none;
+  }
 }

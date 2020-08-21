@@ -65,6 +65,29 @@
     }
   }
 
+  &--project {
+    background-color: $latest-news-background-color;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 20px 40px 20px;
+    flex: 0 0 33%;
+    max-width: calc(100% / 3 -40px);
+
+    @include tablets {
+      flex: 0 0 50%;
+      max-width: calc(100% / 2 - 40px);
+    }
+
+    @include phones {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    &--faq {
+      padding: 0 20px;
+    }
+  }
+
   &--activity-news {
     max-width: 100%;
     margin: 0 20px;
@@ -75,6 +98,62 @@
     }
 
   }
+
+  &--faq {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    background: white;
+    margin-bottom: 12px;
+
+    & .news__heading--faq {
+      color: #808080;
+    }
+
+    & .news__content--faq {
+      display: none;
+    }
+
+    & .news__open {
+      &:before {
+        content: '';
+        display: inline-block;
+        background: svg-load('grants__open.svg', width=100%, height=100%) bottom center no-repeat;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &--open {
+
+    & .news__heading--faq {
+      color: black;
+    }
+
+    & .news__content--faq {
+      display: flex;
+    }
+
+    & .news__open {
+      &:before {
+        content: '';
+        display: inline-block;
+        background: svg-load('grants__close.svg', width=100%, height=100%) bottom center no-repeat;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.news__header {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .news__heading {
@@ -82,6 +161,19 @@
   font-size: 16px;
   color: $text-color;
   margin-bottom: 8px;
+
+  &--project {
+    font-size: 14px;
+  }
+
+  &--faq {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--request-status {
+    margin-bottom: 25px;
+  }
 }
 
 .news__content {
@@ -122,6 +214,15 @@
       max-width: 55%;
     }
   }
+
+  &--project {
+    padding: 20px 20px 40px;
+    flex-flow: column nowrap;
+  }
+
+  &--faq {
+
+  }
 }
 
 .test {
@@ -156,6 +257,33 @@
       color: #2a87ce;
     }
   }
+
+  &--article {
+    flex-direction: column;
+    overflow: auto;
+    text-overflow: inherit;
+  }
+
+  &--faq {
+    color: #6f6f6e;
+    font-size: 16px;
+    padding: 10px 30px 0 0;
+
+    &:before {
+      content: "—";
+      padding: 0 12px 0 0;
+    }
+  }
+}
+
+.news__title {
+
+  &--request-status {
+    color: #1d1d1b;
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-weight: 400;
+  }
 }
 
 .news__image {
@@ -173,6 +301,14 @@
     border-radius: 50%;
     overflow: hidden;
     background-position: center center;
+  }
+
+  &--position-reverse {
+    max-width: 110px;
+    max-height: 110px;
+    border-radius: 0%;
+    background-position: center center;
+    margin-right: 20px;
   }
 
   &--activity {
@@ -198,6 +334,17 @@
 
     @include tablets {
       max-width: 100%;
+    }
+  }
+
+  &--article {
+    max-width: 430px;
+    margin-right: 30px;
+    display: flex;
+
+    @include tablets {
+      max-width: 100%;
+      margin: 0;
     }
   }
 }
@@ -346,6 +493,21 @@
   text-transform: uppercase;
   padding-left: 3px;
 
+  &--project {
+    display: none;
+  }
+}
+
+.news__open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--faq {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .announcement {
@@ -417,6 +579,52 @@
 
     &:hover {
       transform: scale(1.01);
+    }
+  }
+
+  &--flex {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &--uncolored {
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &--placement {
+    color: #000000;
+    font-family: "Open Sans";
+    font-size: 16px;
+  }
+}
+
+.news__search {
+  color: #1f4b79;
+  font-family: "Open Sans";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    background: svg-load('search.svg', fill=#1f4b79, width=100%, height=100%) bottom center no-repeat;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    color: $hover-color;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      background: svg-load('search.svg', fill=$hover-color, width=100%, height=100%) bottom center no-repeat;
+      width: 30px;
+      height: 30px;
     }
   }
 }

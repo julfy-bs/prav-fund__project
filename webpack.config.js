@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
 			{
 				loader: "svgo-loader",
 				options: {
-					plugins: [{ removeTitle: true }, { removeAttrs: false }]
+					plugins: [{removeTitle: true}, {removeAttrs: false}]
 				}
 			}
 		]
@@ -80,7 +80,16 @@ module.exports = (env, argv) => {
 		entry: {
 			home: "./src/main__home.js",
 			activity: "./src/main__activity.js",
-			activityPage: "./src/main__activityPage.js"
+			activityPage: "./src/main__activityPage.js",
+			fund: "./src/main__fund.js",
+			fundPolitics: "./src/main__fundPolitics.js",
+			fundDocuments: "./src/main__fundDocuments.js",
+			fundDocumentsAll: "./src/main__fundDocumentsAll.js",
+			fundDirectorateExecutive: "./src/main__fundDirectorateExecutive.js",
+			fundDirectorateTrust: "./src/main__fundDirectorateTrust.js",
+			fundDirectoratePage: "./src/main__fundDirectoratePage.js",
+			grantsAbout: "./src/main__grantsAbout.js",
+			grantsText: "./src/main__grantsText.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -121,7 +130,52 @@ module.exports = (env, argv) => {
 				chunks: ["activityPage"],
 				filename: "activityPage.html"
 			}),
-			new SpriteLoaderPlugin({ plainSprite: true }),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fund.pug",
+				chunks: ["fund"],
+				filename: "fund.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundPolitics.pug",
+				chunks: ["fundPolitics"],
+				filename: "fundPolitics.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDocumentsAll.pug",
+				chunks: ["fundDocumentsAll"],
+				filename: "fundDocumentsAll.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDocuments.pug",
+				chunks: ["fundDocuments"],
+				filename: "fundDocuments.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDirectorateExecutive.pug",
+				chunks: ["fundDirectorateExecutive"],
+				filename: "fundDirectorateExecutive.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDirectorateTrust.pug",
+				chunks: ["fundDirectorateTrust"],
+				filename: "fundDirectorateTrust.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/fundDirectoratePage.pug",
+				chunks: ["fundDirectoratePage"],
+				filename: "fundDirectoratePage.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/grantsAbout.pug",
+				chunks: ["grantsAbout"],
+				filename: "grantsAbout.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/grantsText.pug",
+				chunks: ["grantsText"],
+				filename: "grantsText.html"
+			}),
+			new SpriteLoaderPlugin({plainSprite: true}),
 			new VueLoaderPlugin()
 		],
 		devtool: "#eval-source-map"
