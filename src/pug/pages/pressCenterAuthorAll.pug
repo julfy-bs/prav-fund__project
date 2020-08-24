@@ -1,0 +1,23 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Фонд поддержки и защиты прав соотечественников, проживающих за рубежом - Пресс-центр'
+  - var pageClass = 'press-center'
+
+block content
+  main.main-content
+    .main__wrapper
+      .container.main-container
+        .row-wrapper
+          include ../includes/modules/breadcrumbs
+        .row-wrapper
+          .column-wrapper.column-wrapper--main
+            include ../includes/modules/pressCenterAuthorAllModule
+          .column-wrapper.column-wrapper--side
+            include ../includes/modules/navSidebar
+            include ../includes/modules/tagsSidebar
+            include ../includes/modules/photo
+            include ../includes/modules/video
+            include ../includes/modules/librarySidebar
+  include ../includes/modules/scrollToTop
+

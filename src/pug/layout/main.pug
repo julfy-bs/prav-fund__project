@@ -8,6 +8,9 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title #{title}
+    //link(
+    //rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css"
+    //)
   body(class=pageClass)
     .wrapper
       include ../includes/modules/header
@@ -17,12 +20,8 @@ html(lang="en")
         block content
       include ../includes/modules/footer
 
-    script#overlayTemplate(type="template").
-      <div class="overlay">
-      <div class="container overlay__container">
-      <a class="overlay__close" href="#">x</a>
-      <div class="overlay__content"></div>
-      </div>
-      </div>
-
     <script src="https://yastatic.net/share2/share.js" async="async"></script>
+    <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+    <script>
+    const player = new Plyr('#player');
+    </script>

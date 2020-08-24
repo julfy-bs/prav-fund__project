@@ -26,8 +26,7 @@
     flex-flow: column wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 0 30px;
-    margin-bottom: 35px;
+    margin: 0 30px 35px;
     padding: 0 0 20px;
     border-bottom: 1px solid #dce5ec;
 
@@ -37,26 +36,40 @@
     }
   }
 
+  &--news-all {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 35px;
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    @include phones {
+      flex-flow: column nowrap;
+    }
+  }
+
   &--latest {
     background-color: $latest-news-background-color;
     display: flex;
     flex-flow: column nowrap;
-    margin: 0 40px 40px 0;
+    margin: 0 20px 40px;
     flex: 0 0 50%;
-    max-width: 46.2%;
-
-    &:nth-child(even) {
-      margin-right: 0;
-    }
+    max-width: calc(100% / 2 - 40px);
 
     @include bigTablets {
       flex: 0 0 50%;
-      max-width: 47.2%;
+      max-width: calc(100% / 2 - 40px);
     }
 
     @include tablets {
       flex: 0 0 50%;
-      max-width: 46%;
+      max-width: calc(100% / 2 - 40px);
     }
 
     @include phones {
@@ -71,7 +84,7 @@
     flex-flow: column nowrap;
     margin: 0 20px 40px 20px;
     flex: 0 0 33%;
-    max-width: calc(100% / 3 -40px);
+    max-width: calc(100% / 3 - 40px);
 
     @include tablets {
       flex: 0 0 50%;
@@ -174,6 +187,17 @@
   &--request-status {
     margin-bottom: 25px;
   }
+
+  &--news-all {
+    margin-bottom: 10px;
+  }
+
+  &--media {
+    color: #1d1d1b;
+    font-size: 14px;
+    max-height: 82px;
+    overflow: hidden;
+  }
 }
 
 .news__content {
@@ -200,7 +224,6 @@
   }
 
   &--position {
-    display: flex;
     flex-flow: column nowrap;
     max-width: 60%;
     max-height: 120px;
@@ -215,12 +238,21 @@
     }
   }
 
+  &--author {
+    flex-flow: column nowrap;
+  }
+
   &--project {
     padding: 20px 20px 40px;
     flex-flow: column nowrap;
   }
 
   &--faq {
+
+  }
+
+  &--news-all {
+    flex-flow: column nowrap;
 
   }
 }
@@ -239,6 +271,13 @@
   &--position {
     line-height: 1.6;
     max-height: 71px;
+  }
+
+  &--author {
+    flex-flow: column nowrap;
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 25px;
   }
 
   &--latest {
@@ -274,6 +313,20 @@
       padding: 0 12px 0 0;
     }
   }
+
+  &--news-all {
+    color: #575756;
+    font-size: 14px;
+    line-height: 1.6;
+    max-height: 85px;
+    text-decoration: none;
+  }
+
+  &--overlay {
+    color: #000000;
+    font-size: 14px;
+    text-align: start;
+  }
 }
 
 .news__title {
@@ -283,6 +336,46 @@
     font-family: "Roboto Condensed";
     font-size: 20px;
     font-weight: 400;
+  }
+
+  &--author {
+    color: #1d1d1b;
+    margin-bottom: 30px;
+
+    @include phones {
+      text-align: center;
+    }
+  }
+
+  &--press {
+    color: #1d1d1b;
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &--library {
+    margin-bottom: 30px;
+
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--news-all {
+    font-size: 16px;
+  }
+
+  &--media {
+    font-size: 14px;
+  }
+
+  &--overlay {
+    color: #1d1d1b;
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-weight: 400;
+    text-align: start;
   }
 }
 
@@ -346,6 +439,33 @@
       max-width: 100%;
       margin: 0;
     }
+  }
+
+  &--news-all {
+    max-width: 300px;
+    margin-right: 30px;
+    min-width: 40%;
+    width: 100%;
+
+    @include phones {
+      max-width: none;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--news-page {
+    max-width: 220px;
+    margin-right: 30px;
+    width: 100%;
+
+    @include phones {
+      max-width: none;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--media {
+    padding: 30px;
   }
 }
 
@@ -496,6 +616,38 @@
   &--project {
     display: none;
   }
+
+  &--article {
+    &:before {
+      content: "Автор:";
+      text-transform: capitalize;
+    }
+  }
+
+  &--photo {
+    color: #a7a7a7;
+    font-size: 11px;
+
+    &:before {
+      content: "Фото:";
+      text-transform: capitalize;
+    }
+  }
+}
+
+.source {
+  padding-left: 3px;
+
+  &--article {
+    color: #929191;
+    font-size: 14px;
+
+    &:before {
+      content: "Источник:";
+      text-transform: capitalize;
+      margin-right: 3px;
+    }
+  }
 }
 
 .news__open {
@@ -607,6 +759,7 @@
   font-size: 14px;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   &:after {
     content: '';
@@ -626,5 +779,37 @@
       width: 30px;
       height: 30px;
     }
+  }
+}
+
+.block-photo {
+  width: 100%;
+  display: block;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  max-width: 30%;
+  min-width: 225px;
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: none;
+    min-width: auto;
+    width: 60%;
+
+
+  }
+}
+
+.news__image {
+  &--author {
+    display: block;
+    min-width: 100%;
+    border-radius: 50%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/content/block-photo-1.jpg);
   }
 }

@@ -19,6 +19,16 @@
   @include tablets {
     flex-flow: row wrap;
   }
+
+  &--press {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    @include bigTablets {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .form__block {
@@ -53,10 +63,46 @@
     }
   }
 
+  &--press {
+    max-width: 200px;
+    margin-right: 20px;
+
+    @include tablets {
+      max-width: none;
+      margin-right: 0;
+    }
+  }
+
+  &--press-date {
+    max-width: 150px;
+
+    @include tablets {
+      max-width: none;
+    }
+  }
+
+  &--press-date-span {
+    max-width: 170px;
+
+    @include tablets {
+      max-width: none;
+    }
+  }
+
   &--search {
     max-width: 50px;
     max-height: 50px;
     padding: 0;
+  }
+
+  &--media {
+    max-width: 55%;
+    margin-right: 20px;
+
+    @include tablets {
+      max-width: none;
+      margin-right: 0;
+    }
   }
 
   @include tablets {
@@ -91,6 +137,13 @@
     }
   }
 
+  &--press {
+    max-width: 150px;
+    margin-right: 0;
+    position: relative;
+    padding-left: 50px;
+  }
+
   &:focus {
     outline-color: #40aaf0;
   }
@@ -120,6 +173,22 @@
   @include tablets {
     width: 100%;
     max-width: none;
+  }
+
+  &--press {
+    max-width: 200px;
+
+    @include tablets {
+      width: 100%;
+      max-width: none;
+      margin-right: 0;
+    }
+  }
+
+  &--media {
+    max-width: none;
+    width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -178,4 +247,26 @@
 
 .request-status__span {
   padding: 0 20px 0 20px;
+
+  @include tablets {
+    display: none;
+  }
+
+  &--press {
+    padding: 0;
+    margin: 0 8px;
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: inline-block;
+  background: svg-load('ic_timetable.svg', width=100%, height=100%) bottom center no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+  position: absolute;
+  top: 12px;
+  left: -10px;
 }

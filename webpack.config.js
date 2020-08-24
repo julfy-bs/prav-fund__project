@@ -89,7 +89,16 @@ module.exports = (env, argv) => {
 			fundDirectorateTrust: "./src/main__fundDirectorateTrust.js",
 			fundDirectoratePage: "./src/main__fundDirectoratePage.js",
 			grantsAbout: "./src/main__grantsAbout.js",
-			grantsText: "./src/main__grantsText.js"
+			grantsText: "./src/main__grantsText.js",
+			pressCenterArticleAll: "./src/main__pressCenterArticleAll.js",
+			pressCenterArticlePage: "./src/main__pressCenterArticlePage.js",
+			pressCenterAuthorAll: "./src/main__pressCenterAuthorAll.js",
+			pressCenterAuthorPage: "./src/main__pressCenterAuthorPage.js",
+			pressCenterNewsAll: "./src/main__pressCenterNewsAll.js",
+			pressCenterNewsPage: "./src/main__pressCenterNewsPage.js",
+			pressCenterLibrary: "./src/main__pressCenterLibrary.js",
+			pressCenterPhoto: "./src/main__pressCenterPhoto.js",
+			pressCenterVideo: "./src/main__pressCenterVideo.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -174,6 +183,51 @@ module.exports = (env, argv) => {
 				template: "./src/pug/pages/grantsText.pug",
 				chunks: ["grantsText"],
 				filename: "grantsText.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterArticleAll.pug",
+				chunks: ["pressCenterArticleAll"],
+				filename: "pressCenterArticleAll.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterAuthorAll.pug",
+				chunks: ["pressCenterAuthorAll"],
+				filename: "pressCenterAuthorAll.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterAuthorPage.pug",
+				chunks: ["pressCenterAuthorPage"],
+				filename: "pressCenterAuthorPage.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterArticlePage.pug",
+				chunks: ["pressCenterArticlePage"],
+				filename: "pressCenterArticlePage.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterLibrary.pug",
+				chunks: ["pressCenterLibrary"],
+				filename: "pressCenterLibrary.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterNewsAll.pug",
+				chunks: ["pressCenterNewsAll"],
+				filename: "pressCenterNewsAll.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterNewsPage.pug",
+				chunks: ["pressCenterNewsPage"],
+				filename: "pressCenterNewsPage.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterPhoto.pug",
+				chunks: ["pressCenterPhoto"],
+				filename: "pressCenterPhoto.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterVideo.pug",
+				chunks: ["pressCenterVideo"],
+				filename: "pressCenterVideo.html"
 			}),
 			new SpriteLoaderPlugin({plainSprite: true}),
 			new VueLoaderPlugin()

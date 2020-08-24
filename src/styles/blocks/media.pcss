@@ -1,0 +1,54 @@
+.media__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 60px;
+
+  @include phones {
+    margin: 0;
+  }
+}
+
+.media__item {
+  flex: 0 0 50%;
+  max-width: calc(100% / 2 - 40px);
+  margin: 0 20px 40px;
+
+  @include phones {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 0 40px;
+  }
+}
+
+.media-item__header {
+  background-color: #dde6ed;
+}
+
+.media-item__footer {
+  background-color: #ffffff;
+  min-height: 200px;
+  padding: 20px 30px;
+  position: relative;
+
+}
+
+.media-item__nav {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+.media-quantity {
+  color: #6f6f6e;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.overlay-open {
+  color: #1f4b79;
+  font-size: 14px;
+}

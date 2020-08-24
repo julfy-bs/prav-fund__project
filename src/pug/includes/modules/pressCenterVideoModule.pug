@@ -1,0 +1,19 @@
+section.overlay
+  .container.overlay__container
+    .overlay__content.overlay-content
+      .overlay-content__header
+        .plyr__video-embed#player
+          iframe.video-player(
+            src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+            allowfullscreen
+            allowtransparency
+            allow="autoplay"
+          )
+      .overlay-content__main
+        .news__heading.news__heading--overlay
+          h2.news__title.news__title--overlay Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+        .news__date.news__date--video
+          span.date 30.04.2020
+        .news__text.news__text--overlay Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid aperiam beatae consequuntur doloribus ducimus, earum illum in incidunt laudantium minima necessitatibus obcaecati odio pariatur quae quam quidem quisquam reiciendis rem repudiandae sunt tenetur ullam! Ab aliquam dolorum facere nemo optio placeat. Commodi cumque illum iste molestias porro qui quo quod sit? Assumenda beatae blanditiis culpa cumque cupiditate dolore dolorem earum explicabo fuga impedit incidunt itaque laboriosam maiores maxime nemo non porro praesentium quam quis quo rerum sunt, suscipit voluptate?
+    a(href="#").overlay__close#close-overlay-button
+      +icon('popUP-close', 'close-button__img', '20')
