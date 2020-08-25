@@ -98,7 +98,8 @@ module.exports = (env, argv) => {
 			pressCenterNewsPage: "./src/main__pressCenterNewsPage.js",
 			pressCenterLibrary: "./src/main__pressCenterLibrary.js",
 			pressCenterPhoto: "./src/main__pressCenterPhoto.js",
-			pressCenterVideo: "./src/main__pressCenterVideo.js"
+			pressCenterVideo: "./src/main__pressCenterVideo.js",
+			contacts: "./src/main__contacts.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -127,7 +128,8 @@ module.exports = (env, argv) => {
 		plugins: [
 			new HtmlWebpackPlugin({
 				template: "./src/pug/pages/home.pug",
-				chunks: ["home"]
+				chunks: ["home"],
+				filename: "home.html"
 			}),
 			new HtmlWebpackPlugin({
 				template: "./src/pug/pages/activity.pug",
@@ -228,6 +230,11 @@ module.exports = (env, argv) => {
 				template: "./src/pug/pages/pressCenterVideo.pug",
 				chunks: ["pressCenterVideo"],
 				filename: "pressCenterVideo.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/contacts.pug",
+				chunks: ["contacts"],
+				filename: "contacts.html"
 			}),
 			new SpriteLoaderPlugin({plainSprite: true}),
 			new VueLoaderPlugin()

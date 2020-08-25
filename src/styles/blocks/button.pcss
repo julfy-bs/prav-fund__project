@@ -1,9 +1,10 @@
 .button {
   width: 161px;
   height: 38px;
+  color: #f7fafd;
+  font-family: "Open Sans";
 
   &--links {
-    color: #f7fafd;
     font-size: 14px;
     letter-spacing: 0.28px;
     background: svg-load("button-background.svg", fill=#40aaf0, width=100%, height=100%) center center no-repeat;
@@ -17,7 +18,6 @@
   }
 
   &--banner {
-    color: #f7fafd;
     font-size: 16px;
     letter-spacing: 0.16px;
     width: 260px;
@@ -35,7 +35,6 @@
   }
 
   &--article {
-    color: #f7fafd;
     font-size: 16px;
     letter-spacing: 0.16px;
     width: 260px;
@@ -49,7 +48,6 @@
   }
 
   &--activity {
-    color: #f7fafd;
     font-size: 16px;
     letter-spacing: 0.16px;
     width: 260px;
@@ -60,6 +58,17 @@
 
     &:hover {
       background: svg-load("button--banner.svg", fill=#009ef8, width=100%, height=100%) center center no-repeat;
+    }
+  }
+
+  &--send {
+    font-size: 14px;
+    background: svg-load("button--banner.svg", fill=#40aaf0, width=100%, height=100%) center left no-repeat;
+    width: 220px;
+    height: 40px;
+
+    &:hover {
+      background: svg-load("button--banner.svg", fill=#009ef8, width=100%, height=100%) center left no-repeat;
     }
   }
 }
