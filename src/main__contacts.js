@@ -4,13 +4,13 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import "./scripts/map"
-import "./scripts/burger-menu"
-import "./scripts/news-tabs"
-import "./scripts/slider--sponsors"
-import "./scripts/slider--photo"
-import "./scripts/slider--video"
+// import "./scripts/burger-menu"
+// import "./scripts/news-tabs"
+// import "./scripts/slider--sponsors"
+// import "./scripts/slider--photo"
+// import "./scripts/slider--video"
 // import "./scripts/slider--activity-news"
-import "./scripts/search"
-import "./scripts/scrollToTop"
-import "./scripts/overlay"
+// import "./scripts/search"
+// import "./scripts/scrollToTop"
+// import "./scripts/overlayPhoto"
 

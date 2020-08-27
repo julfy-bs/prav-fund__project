@@ -12,4 +12,4 @@ if (process.env.NODE_ENV === "development") {
 // import "./scripts/search"
 // import "./scripts/slider--activity-news"
 // import "./scripts/scrollToTop"
-// import "./scripts/overlay"
+// import "./scripts/overlayPhoto"

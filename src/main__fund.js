@@ -12,5 +12,5 @@ import "./scripts/slider--library"
 import "./scripts/slider--activity-news"
 import "./scripts/search"
 import "./scripts/scrollToTop"
-import "./scripts/overlay"
+import "./scripts/overlayPhoto"
 

@@ -102,6 +102,26 @@
       background: svg-load('video-play-hover.svg', width=100%, height=100%) top center no-repeat;
     }
   }
+
+  &--media-page {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 68px;
+      height: 48px;
+      margin-left: -34px;
+      margin-top: -24px;
+      background: svg-load('video-play.svg', width=100%, height=100%) top center no-repeat;
+    }
+
+    &:hover {
+      &::after {
+        background: svg-load('video-play-hover.svg', width=100%, height=100%) top center no-repeat;
+      }
+    }
+  }
 }
 
 .video__footer {

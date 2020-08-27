@@ -1,17 +1,15 @@
 import "./styles/main.pcss"
 if (process.env.NODE_ENV === "development") {
-	require("file-loader!./pug/pages/grantsText.pug")
+	require("file-loader!./pug/pages/pressCenterVideoPage.pug")
 }
 
-// import "./scripts/grants__open"
 // import "./scripts/burger-menu"
 // import "./scripts/news-tabs"
 // import "./scripts/slider--sponsors"
 // import "./scripts/slider--photo"
 // import "./scripts/slider--video"
 // import "./scripts/slider--library"
-// import "./scripts/slider--activity-news"
 // import "./scripts/search"
+// import "./scripts/slider--activity-news"
 // import "./scripts/scrollToTop"
-// import "./scripts/overlayPhoto"
-
+import "./scripts/overlayVideo"

@@ -4,6 +4,12 @@ block variables
   - var title = 'Фонд поддержки и защиты прав соотечественников, проживающих за рубежом - Контакты'
   - var pageClass = 'contacts'
 
+block HeadScript
+  script(
+    src="https://api-maps.yandex.ru/2.1/?apikey=c1b1a47d-8c13-47fa-bc0a-9fb2c032c5a6&lang=ru_RU"
+    type="text/javascript"
+  )
+
 block content
   main.main-content
     .main__wrapper
@@ -31,6 +37,3 @@ block script
     src="https://api-maps.yandex.ru/2.1/?apikey=c1b1a47d-8c13-47fa-bc0a-9fb2c032c5a6&lang=ru_RU"
     type="text/javascript"
   )
-
-
-

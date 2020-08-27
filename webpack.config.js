@@ -98,7 +98,11 @@ module.exports = (env, argv) => {
 			pressCenterNewsPage: "./src/main__pressCenterNewsPage.js",
 			pressCenterLibrary: "./src/main__pressCenterLibrary.js",
 			pressCenterPhoto: "./src/main__pressCenterPhoto.js",
+			pressCenterPhotoPage: "./src/main__pressCenterPhotoPage.js",
+			pressCenterPhotoOverlay: "./src/main__pressCenterPhotoOverlay.js",
 			pressCenterVideo: "./src/main__pressCenterVideo.js",
+			pressCenterVideoPage: "./src/main__pressCenterVideoPage.js",
+			pressCenterVideoOverlay: "./src/main__pressCenterVideoOverlay.js",
 			contacts: "./src/main__contacts.js"
 		},
 		output: {
@@ -227,9 +231,29 @@ module.exports = (env, argv) => {
 				filename: "pressCenterPhoto.html"
 			}),
 			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterPhotoPage.pug",
+				chunks: ["pressCenterPhotoPage"],
+				filename: "pressCenterPhotoPage.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterPhotoOverlay.pug",
+				chunks: ["pressCenterPhotoOverlay"],
+				filename: "pressCenterPhotoOverlay.html"
+			}),
+			new HtmlWebpackPlugin({
 				template: "./src/pug/pages/pressCenterVideo.pug",
 				chunks: ["pressCenterVideo"],
 				filename: "pressCenterVideo.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterVideoPage.pug",
+				chunks: ["pressCenterVideoPage"],
+				filename: "pressCenterVideoPage.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/pressCenterVideoOverlay.pug",
+				chunks: ["pressCenterVideoOverlay"],
+				filename: "pressCenterVideoOverlay.html"
 			}),
 			new HtmlWebpackPlugin({
 				template: "./src/pug/pages/contacts.pug",

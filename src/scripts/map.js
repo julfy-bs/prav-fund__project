@@ -1,36 +1,29 @@
-ymaps.ready(init);
-let myMap;
+ymaps.ready(function () {
+	let myMap = new ymaps.Map('map', {
+			center: [55.74732714, 37.58535200],
+			zoom: 18,
+		}, {
+			searchControlProvider: 'yandex#search'
+		}),
 
-const init = () => {
-	myMap = new ymaps.Map("map", {
-		center: [55.74732714, 37.58535200],
-		zoom: 18,
-		controls: [] // Отключение кнопок на карте //
-	});
+		// Настройки маркеров
+		myPlacemark = new ymaps.Placemark([55.74732714, 37.58535200], {
+			hintContent: 'Фонд поддержки и защиты прав соотечественников, проживающих за рубежом',
+			balloonContent: 'Это красивая метка'
+		}, {
+			// Опции.
+			draggable: false,
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#image',
+			// Своё изображение иконки метки.
+			iconImageHref: 'src/images/icons/map-marker.svg',
+			// Размеры метки.
+			iconImageSize: [60, 62],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-30, -90]
+		});
 
-	// Массив координат на которых будут метки
-	const coords = [
-		[55.74732714, 37.58535200],
-	];
-
-	// Настройки маркеров
-	const myCollection = new ymaps.GeoObjectCollection({}, {
-		draggable: false,
-		iconLayout: 'default#image',
-		iconImageHref: './img/icons/map-marker.svg',
-		iconImageSize: [46, 57],
-		iconImageOffset: [-35, -52]
-	})
-
-	coords.forEach(coord => {
-		myCollection.add(new ymaps.Placemark(coord));
-	})
-
-	// Команда добавления маркеров на карту
-	myMap.geoObjects.add(myCollection);
-
-	// Выключение масштабирование колесом мыши
-	myMap.behaviors.disable('scrollZoom');
-};
-
-ymaps.ready(init);
+	myMap.geoObjects
+		.add(myPlacemark);
+});
