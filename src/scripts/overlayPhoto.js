@@ -1,5 +1,5 @@
 const openOverlay = document.querySelector('#photo-overlay-button');
-const overlayPhoto = document.querySelector('.overlay');
+const overlayPhoto = document.querySelector('#overlayPhoto');
 const closeOverlay = document.querySelector('#close-overlay-button');
 
 openOverlay.addEventListener('click', e => {

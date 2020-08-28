@@ -1,5 +1,5 @@
 const openOverlay = document.querySelector('#video-overlay-button');
-const overlayVideo = document.querySelector('.overlay');
+const overlayVideo = document.querySelector('#overlayVideo');
 const closeOverlay = document.querySelector('#close-overlay-button');
 
 openOverlay.addEventListener('click', e => {
