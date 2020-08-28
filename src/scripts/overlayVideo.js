@@ -1,15 +1,23 @@
-const openOverlay = document.querySelector('#video-overlay-button');
-const overlayVideo = document.querySelector('.overlay');
-const closeOverlay = document.querySelector('#close-overlay-button');
+let openOverlay = document.querySelector('#video-overlay-button');
+let overlayVideo = document.querySelector('#overlayVideo');
+let overlayContent = document.querySelector('.overlay-content');
+let theSource = overlayVideo.attr('src');
 
 openOverlay.addEventListener('click', e => {
 	e.preventDefault();
+	overlayVideo.prop('src', 'theSource');
 	overlayVideo.classList.add('overlay--active');
 	document.body.classList.add('restrictedScroll');
 });
 
-closeOverlay.addEventListener('click', e => {
-	e.preventDefault();
-	overlayVideo.classList.remove('overlay--active');
-	document.body.classList.remove('restrictedScroll');
+overlayVideo.addEventListener("click", e => {
+	if (e.target !== overlayContent) {
+		e.preventDefault();
+		overlayVideo.prop('src', '');
+		overlayVideo.classList.remove('overlay--active');
+		document.body.classList.remove('restrictedScroll');
+	}
 });
+
+
+
