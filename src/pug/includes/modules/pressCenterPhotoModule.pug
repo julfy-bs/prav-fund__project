@@ -21,6 +21,10 @@ section.section.press-center
           span.request-status__span.request-status__span--press -
         label.form__block.form__block--press-date.label
           input(type="date" required).request-status__input.request-status__input--press
+          button.form__block--search.search__block
+            - var icons = ["search-icon"]
+              each item in icons
+                +icon(item, "search-icon search-icon--request-status")
     .media__wrapper
       .media__item.media-item
         .media-item__header

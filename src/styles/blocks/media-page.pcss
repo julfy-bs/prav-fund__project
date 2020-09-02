@@ -47,3 +47,63 @@
   padding: 20px 0;
   margin-bottom: 20px;
 }
+
+.photo-overlay-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  z-index: 1;
+}
+
+.fotorama__arr--next {
+  background: svg-load('arrow-right.svg', fill=none, stroke="$slider-buttons-calm-color", width=100%, height=100%) bottom center no-repeat;
+  display: block;
+  width: 28px;
+  height: 35px;
+
+  &:hover {
+    content: '';
+    display: block;
+    background: svg-load('arrow-right.svg', fill=none, stroke="$slider-buttons-hover-color", width=100%, height=100%) bottom center no-repeat;
+    width: 28px;
+    height: 35px;
+  }
+}
+
+.fotorama__arr--prev {
+  background: svg-load('arrow.svg', fill=none, stroke="$slider-buttons-calm-color", width=100%, height=100%) bottom center no-repeat;
+  display: block;
+  width: 28px;
+  height: 35px;
+
+
+  &:hover {
+    content: '';
+    display: block;
+    background: svg-load('arrow.svg', fill=none, stroke="$slider-buttons-hover-color", width=100%, height=100%) bottom center no-repeat;
+    width: 28px;
+    height: 35px;
+  }
+}
+
+.fullscreen-icon {
+  width: 50px;
+  fill: $slider-buttons-calm-color;
+  position: relative;
+
+  &:hover {
+    fill: $slider-buttons-hover-color;
+  }
+
+
+  @include phones {
+    margin-top: 4px;
+  }
+}
+
+.fotorama__thumb-border {
+  border-color: $slider-buttons-hover-color;
+}

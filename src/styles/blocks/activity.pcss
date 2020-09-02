@@ -29,9 +29,21 @@
   justify-content: flex-end;
   margin-bottom: 10px;
 
+  &:last-child {
+    & .activity__line {
+      display: none;
+    }
+  }
+
   &--all {
     justify-content: flex-start;
     margin: 0;
+
+    &:last-child {
+      & .activity__line {
+        display: none;
+      }
+    }
   }
 
   &--item {
@@ -163,6 +175,9 @@
 
   &--all {
     display: inline-block;
+
+
+
   }
 
 }
@@ -189,6 +204,8 @@
   max-height: 100px;
   height: 100%;
   background-color: #cccccc;
+
+
 }
 
 .activity-img {

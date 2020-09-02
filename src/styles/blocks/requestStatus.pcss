@@ -21,12 +21,12 @@
   }
 
   &--press {
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    flex-flow: row nowrap;
 
     @include bigTablets {
       flex-flow: row wrap;
-      justify-content: flex-start;
+      justify-content: space-between;
+
     }
   }
 }
@@ -64,8 +64,8 @@
   }
 
   &--press {
-    max-width: 200px;
-    margin-right: 20px;
+    max-width: 22%;
+    margin-right: 0;
 
     @include tablets {
       max-width: none;
@@ -74,15 +74,21 @@
   }
 
   &--press-date {
-    max-width: 150px;
+    max-width: 50%;
+    justify-content: flex-end;
 
     @include tablets {
       max-width: none;
     }
+
+    @include phones {
+      justify-content: flex-start;
+      flex-flow: row wrap;
+    }
   }
 
   &--press-date-span {
-    max-width: 170px;
+    max-width: 22.37%;
 
     @include tablets {
       max-width: none;
@@ -93,10 +99,14 @@
     max-width: 50px;
     max-height: 50px;
     padding: 0;
+
+    @include phones {
+      margin-bottom: 30p;
+    }
   }
 
   &--media {
-    max-width: 45%;
+    max-width: 50%;
     margin-right: 20px;
 
     @include tablets {
@@ -138,10 +148,21 @@
   }
 
   &--press {
-    max-width: 150px;
+    max-width: 40%;
     margin-right: 0;
     position: relative;
     padding-left: 50px;
+
+    @include phones {
+      width: calc(100% - 50px);
+      margin-bottom: 30px;
+    }
+  }
+
+  &--press-date {
+    @include phones {
+      width: 100%;
+    }
   }
 
   &:focus {
@@ -176,7 +197,9 @@
   }
 
   &--press {
-    max-width: 200px;
+    max-width: none;
+    margin: 0;
+    width: 100%;
 
     @include tablets {
       width: 100%;

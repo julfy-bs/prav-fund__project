@@ -2,9 +2,9 @@ section.overlay#overlayPhoto
   .container.overlay__container
     .overlay__content.overlay-content#overlayContent
       .overlay-content__header.overlay-content__header--photo
-          .fotorama(
+          .fotorama#fotorama(
             data-nav="thumbs"
-            data-allowfullscreen="true"
+            data-allowfullscreen="false"
             data-hash="true"
             data-loop="true"
             data-autoplay="true"
@@ -33,5 +33,5 @@ section.overlay#overlayPhoto
             img(src='http://cf14422.tmweb.ru/upload/iblock/3c0/3c06be6701e17b9af4f2671516d59628.jpg').img
             img(src='http://cf14422.tmweb.ru/upload/iblock/3c0/3c06be6701e17b9af4f2671516d59628.jpg').img
 
-    a(href="#").overlay__close#close-overlay-button
+    a(href="#").overlay__close#closeOverlay
       +icon('popUP-close', 'close-button__img', '20')

@@ -28,11 +28,14 @@ section.section.press-center
             option(value="7").select__item Не поддерживать / Отклонить
             option(value="8").select__item Заявка отозвана
             option(value="9").select__item Не принято к рассмотрению
-        label.form__block.form__block--press-date.form__block--press-date-span.label
-          input(type="date" required).request-status__input.request-status__input--press
+        label.form__block.form__block--press-date
+          input(type="date" required).request-status__input.request-status__input--press.request-status__input--press-date
           span.request-status__span.request-status__span--press -
-        label.form__block.form__block--press-date.label
           input(type="date" required).request-status__input.request-status__input--press
+          button.form__block--search.search__block
+            - var icons = ["search-icon"]
+            each item in icons
+              +icon(item, "search-icon search-icon--request-status")
     .press-center__wrapper
       .news__item.news__item--latest.news__item--press-center
         .news__image

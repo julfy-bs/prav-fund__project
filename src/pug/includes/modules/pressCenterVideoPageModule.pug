@@ -7,8 +7,12 @@ section.section.media-page
           .news__date.news__date--video
             span.date 30.04.2020
         .media-page-content-header__bottom
-          .media-page__image
-          a(href="#").video__play.video__play--media-page#video-overlay-button
+          .plyr__video-embed#player
+            iframe.video-player(
+              src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+              allowfullscreen
+              allowtransparency
+            )
       .media-page-content__main
         .news__heading.news__heading--media-page
           h2.news__title.news__title--media-page Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
