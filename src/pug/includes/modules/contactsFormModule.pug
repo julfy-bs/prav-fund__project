@@ -1,18 +1,17 @@
-section.section.contact-form
-  h1.section__title.section__title--page.section__title--contacts Обратная связь
-  form.contact-form#form
-    .contact-form__row
-      label.contact-form__block
-        input(type="text" name="name" placeholder="*Ваше имя" required).contact-form__input.contact-form__input--name
-    .contact-form__row
-      label.contact-form__block
-        input(type="email" name="name" placeholder="*Ваш е-mail" required).contact-form__input.contact-form__input--email
-    .contact-form__row
-      label.contact-form__block
-        textarea(name="comment" placeholder="*Ваше сообщение" required).contact-form-input.contact-form-input__textarea
+section.section.form-section
+  h2.section__title.section__title--page.section__title--contacts О Фонде
+  form(action='/kontakty/' method='POST')
+    input#sessid(type='hidden' name='sessid' value='75fe547932dcd2ebbd3507b1841f857f')
+    .mf-name
+      input(type='text' name='user_name' value='' placeholder="*Ваше имя")
+    .mf-email
+      input(type='text' name='user_email' value='' placeholder="*Ваш е-mail")
+    .mf-message
+      textarea(name='MESSAGE' rows='5' cols='40' placeholder="*Ваше сообщение")
+    input(type='hidden' name='PARAMS_HASH' value='925c8a2a7ec0b9c2e32ed3d0f73b0767')
     .g-recaptcha
       +image("content/news-item-2.jpg", "img img--captcha")
-      input(type="text" name="" placeholder="*Введите текст для защитыы" required).contact-form__input.contact-form__input--name
-      .contact-form__error
-    .contact-form__row
-      button.button.button--send#sendButton Отправить вопрос
+      input(type="text" name="" placeholder="*Введите текст для защитыы" required)
+    button
+    input(type='submit' name='submit' value='Отправить вопрос').button.button--send#sendButton
+

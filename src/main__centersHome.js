@@ -1,8 +1,8 @@
 import "./styles/main.pcss"
 if (process.env.NODE_ENV === "development") {
-	require("file-loader!./pug/pages/pressCenterVideoPage.pug")
+	require("file-loader!./pug/pages/activityPage.pug")
 }
-
+import "./scripts/vmap"
 // import "./scripts/burger-menu"
 // import "./scripts/news-tabs"
 // import "./scripts/slider--sponsors"
@@ -12,4 +12,4 @@ if (process.env.NODE_ENV === "development") {
 // import "./scripts/search"
 // import "./scripts/slider--activity-news"
 // import "./scripts/scrollToTop"
-import "./scripts/overlayForm"
+// import "./scripts/overlayPhoto"
