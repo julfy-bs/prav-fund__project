@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
 	const isProductionBuild = argv.mode === "production";
-	const publicPath = "/prav-fund__project/";
+	const publicPath = "/local/templates/pravfond/assets/";
 
 	const pcss = {
 		test: /\.(p|post|)css$/,
@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
 			{
 				loader: "svgo-loader",
 				options: {
-					plugins: [{removeTitle: true}, {removeAttrs: false}]
+					plugins: [{ removeTitle: true }, { removeAttrs: false }]
 				}
 			}
 		]
@@ -272,7 +272,7 @@ module.exports = (env, argv) => {
 				chunks: ["centersContact"],
 				filename: "centersContact.html"
 			}),
-			new SpriteLoaderPlugin({plainSprite: true}),
+			new SpriteLoaderPlugin({ plainSprite: true }),
 			new VueLoaderPlugin()
 		],
 		devtool: "#eval-source-map"
