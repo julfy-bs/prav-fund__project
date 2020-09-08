@@ -2,7 +2,7 @@ extends ../layout/main
 
 block variables
   - var title = 'Фонд поддержки и защиты прав соотечественников, проживающих за рубежом - Контакты'
-  - var pageClass = 'contacts'
+  - var pageClass = 'centers-contact'
 
 block HeadScript
   script(
@@ -18,9 +18,7 @@ block content
           include ../includes/modules/breadcrumbs
         .row-wrapper
           .column-wrapper.column-wrapper--main
-            include ../includes/modules/contactsModule
-            include ../includes/modules/fundProps
-            include ../includes/modules/contactsFormModule
+            include ../includes/modules/centersContactModule
           .column-wrapper.column-wrapper--side
             include ../includes/modules/navSidebar
             include ../includes/modules/news
