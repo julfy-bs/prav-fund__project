@@ -47,5 +47,7 @@
   "links-color": "#4b6fd7",
   "bp-bigTablets": "1024px",
   "bp-tablets": "768px",
-  "bp-phones": "480px"
+  "bp-phones": "480px",
+  "slider-left-shadow": "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%)",
+  "slider-right-shadow": "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%)"
 }
