@@ -14,12 +14,12 @@ ymaps.ready(function () {
 			// Необходимо указать данный тип макета.
 			iconLayout: 'default#image',
 			// Своё изображение иконки метки.
-			iconImageHref: '/local/templates/pravfond/assets/images/sprite.svg#map-marker',
+			iconImageHref: '/local/templates/pravfond/assets/images/map-marker.svg',
 			// Размеры метки.
 			iconImageSize: [60, 62],
 			// Смещение левого верхнего угла иконки относительно
 			// её "ножки" (точки привязки).
-			iconImageOffset: [-30, -90]
+			iconImageOffset: [-30, -58]
 		});
 
 	myMap.geoObjects

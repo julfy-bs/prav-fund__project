@@ -36,6 +36,7 @@ $(".js-init-region-map").each(function () {
 		hoverOpacity: null,
 		normalizeFunction: 'polynomial',
 		selectedColor: selectedcolor,
+		multiSelectRegion: false,
 		selectedRegions: ['RU', 'AZ', 'BE', 'DK', 'GE', 'JO', 'IE', 'KZ', 'KG', 'LV', 'LT', 'CN', 'MD', 'TJ', 'SE', 'EE'],
 		onRegionClick: onRegionClickCallback,
 		showTooltip: russiacolor ? true : false,

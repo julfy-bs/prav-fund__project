@@ -114,13 +114,29 @@
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 45px;
+
 }
 
 .b-coo-map__letter {
-  flex: 0 0 33%;
-  max-width: 33%;
   list-style: none;
   position: relative;
+  flex: 0 0 33%;
+  max-width: calc(100% / 3 - 40px);
+  margin-bottom: 10px;
+  @include bigTablets {
+    flex: 0 0 50%;
+    max-width: calc(100% / 2 - 40px);
+  }
+
+  @include tablets {
+    flex: 0 0 50%;
+    max-width: calc(100% / 2 - 40px);
+  }
+
+  @include phones {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .b-coo-map__letter .b-communities__item {
@@ -133,7 +149,7 @@
   display: block;
   float: left;
   clear: left;
-  line-height: 14px;
+  line-height: 20px;
   margin-bottom: 8px;
   padding-left: 32px;
   position: relative;
@@ -161,6 +177,7 @@
   width: 23px;
   height: 15px;
   background-image: url('../images/content/flags.jpg');
+
 }
 
 .flag.AE {
