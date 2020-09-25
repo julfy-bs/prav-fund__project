@@ -1,4 +1,4 @@
-const employeeLink = document.querySelectorAll('.news__open--faq');
+const employeeLink = document.querySelectorAll('.news__item--faq');
 let arrayEmployeeLink = [...employeeLink];
 arrayEmployeeLink.map((item) => {
 	item.addEventListener('click', (e) => {

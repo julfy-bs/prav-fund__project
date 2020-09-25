@@ -246,9 +246,7 @@
     flex-flow: column nowrap;
   }
 
-  &--faq {
-
-  }
+  &--faq {}
 
   &--news-all {
     flex-flow: column nowrap;
@@ -303,13 +301,21 @@
   }
 
   &--faq {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #6f6f6e;
     font-size: 16px;
-    padding: 10px 30px 0 0;
+    padding: 10px 30px 0 20px;
 
     &:before {
       content: "—";
       padding: 0 12px 0 0;
+      position: absolute;
+      top: 6px;
+      left: 0;
     }
   }
 
@@ -399,6 +405,7 @@
     background-size: cover;
     background-position: center;
   }
+
   &--short {
     flex-flow: row nowrap;
     max-width: 83px;
@@ -495,7 +502,7 @@
   flex-flow: row wrap;
   align-items: center;
 
-  & > .news__link {
+  &>.news__link {
     width: auto;
   }
 
@@ -579,9 +586,7 @@
     margin: 0;
   }
 
-  &--activity-item {
-
-  }
+  &--activity-item {}
 
   &--home {
     display: none;
@@ -739,7 +744,7 @@
 .news__link {
   text-decoration: none;
   width: 100%;
-//Автор переносится на новую строчку пытался растянуть картинки
+  //Автор переносится на новую строчку пытался растянуть картинки
 
   &:hover {
     color: #2a87ce;
