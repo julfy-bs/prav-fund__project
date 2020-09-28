@@ -35,13 +35,10 @@ nav.menu
           li.socials__item
             a(href="#").socials__link
               +icon(item, "socials__icon")
-      form.search#search-link
-        label.search__block
-          input(type="text" name="name" placeholder="" required).search__input#search-input
-        .search-icon__block
-          - var icons = ["search-icon"]
-          each item in icons
-            +icon(item, "search-icon")
+      a.search-icon__block(
+        href="#"
+      )
+        .search-icon__button
 
     nav#hamburger-menu.hamburger-menu
       .burger-header__menu

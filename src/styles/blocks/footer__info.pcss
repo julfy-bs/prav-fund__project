@@ -25,6 +25,15 @@
 
 }
 
+.footer-print__wrapper {
+  display: flex;
+  max-width: 900px;
+
+  @include bigTablets {
+    flex-wrap: wrap;
+  }
+}
+
 .footer__logo {
   width: 10%;
   transform: translateY(-17px);
@@ -48,7 +57,7 @@
   width: 40%;
   font-size: 14px;
   font-weight: 400;
-
+  margin-right: 160px;
   @include bigTablets {
     width: 75%;
     margin-bottom: 50px;

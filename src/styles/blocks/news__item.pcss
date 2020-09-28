@@ -2,6 +2,35 @@
   display: flex;
   position: relative;
 
+  &--search {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 20px 60px;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    //&:before {
+    //  content: '1.';
+    //  position: absolute;
+    //  top: 0;
+    //  left: 20px;
+    //  color: #1d1d1b;
+    //  font-family: "Roboto Condensed";
+    //  font-size: 24px;
+    //  font-weight: 400;
+    //}
+  }
+
   &--short {
     flex-flow: row nowrap;
     width: 33%;
@@ -204,6 +233,10 @@
   color: $news-content-color;
   font-size: 14px;
 
+  &--search {
+    flex-flow: column nowrap;
+  }
+
   &--short {
     color: #1f4b79;
     flex-flow: row nowrap;
@@ -246,7 +279,8 @@
     flex-flow: column nowrap;
   }
 
-  &--faq {}
+  &--faq {
+  }
 
   &--news-all {
     flex-flow: column nowrap;
@@ -508,7 +542,7 @@
   flex-flow: row wrap;
   align-items: center;
 
-  &>.news__link {
+  & > .news__link {
     width: auto;
   }
 
@@ -592,7 +626,8 @@
     margin: 0;
   }
 
-  &--activity-item {}
+  &--activity-item {
+  }
 
   &--home {
     display: none;
@@ -750,7 +785,7 @@
 .news__link {
   text-decoration: none;
   width: 100%;
-  //Автор переносится на новую строчку пытался растянуть картинки
+//Автор переносится на новую строчку пытался растянуть картинки
 
   &:hover {
     color: #2a87ce;
