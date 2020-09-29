@@ -267,6 +267,16 @@
     }
   }
 
+  &--position-reverse {
+    flex-flow: column nowrap;
+    max-width: 60%;
+    max-height: 120px;
+
+    @include bigTablets {
+      max-width: 70%;
+    }
+  }
+
   &--author {
     flex-flow: column nowrap;
   }
@@ -812,6 +822,18 @@
     color: #000000;
     font-family: "Open Sans";
     font-size: 16px;
+  }
+
+  &--letter {
+    &:hover {
+      color: #2a87ce;
+      text-decoration: underline;
+    }
+  }
+
+  &--letter-selected {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
   }
 }
 
