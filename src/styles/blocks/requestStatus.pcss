@@ -46,14 +46,10 @@
   margin-bottom: 45px;
 
   &--option {
-    max-width: 50%;
-    margin-right: 10px;
+    max-width: 100%;
   }
 
-  &--date-option {
-    max-width: 50%;
-    margin-left: 10px;
-  }
+
 
   &--code {
     max-width: 150px;
@@ -131,6 +127,14 @@
     }
   }
 
+  &--date-option {
+    max-width: 100%;
+
+    @include tablets {
+      flex-flow: column nowrap;
+    }
+  }
+
   @include tablets {
     margin-bottom: 35px;
   }
@@ -202,7 +206,12 @@
   }
 
   &--without-button {
-    max-width: 50%;
+    max-width: 100%;
+
+    @include tablets {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &:focus {

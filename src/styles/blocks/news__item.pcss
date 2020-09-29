@@ -3,12 +3,11 @@
   position: relative;
 
   &--search {
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 0 20px 60px;
+    padding: 0 0 20px 0;
     border-bottom: 1px solid #cccccc;
-    position: relative;
     margin-bottom: 30px;
 
     &:first-child {
@@ -19,16 +18,14 @@
       border: none;
     }
 
-    //&:before {
-    //  content: '1.';
-    //  position: absolute;
-    //  top: 0;
-    //  left: 20px;
-    //  color: #1d1d1b;
-    //  font-family: "Roboto Condensed";
-    //  font-size: 24px;
-    //  font-weight: 400;
-    //}
+    & > .news__counter {
+      color: #1d1d1b;
+      font-family: "Roboto Condensed";
+      font-size: 24px;
+      font-weight: 400;
+      display: flex;
+      margin-right: 40px;
+    }
   }
 
   &--short {
