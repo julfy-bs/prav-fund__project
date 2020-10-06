@@ -16,14 +16,6 @@
   background-repeat: no-repeat;
 }
 
-.main-container {
-  padding-bottom: 3rem;
-
-  &--no-padding-botom {
-    padding-bottom: 0;
-  }
-}
-
 .row-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -76,6 +68,7 @@
 
 .main-container {
   padding-top: 60px;
+  padding-bottom: 3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -84,5 +77,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  &--no-padding-botom {
+    padding-bottom: 0;
+  }
+
+  &--no-padding-top {
+    padding-bottom: 0;
   }
 }
