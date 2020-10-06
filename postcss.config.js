@@ -18,7 +18,7 @@ module.exports = {
     require("postcss-nested"),
     require("postcss-rgb"),
     require("postcss-inline-svg")({
-      removeFill: true,
+      removeFill: false,
       path: "./src/images/icons"
     }),
     require("cssnano"),

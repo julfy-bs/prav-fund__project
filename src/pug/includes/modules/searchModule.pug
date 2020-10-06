@@ -1,0 +1,69 @@
+section.section.search-page__section
+  h1.section__title.section__title--page Результаты поиска
+  .search-page__wrapper
+    form.form.form--request-status
+      .form__row.form__row--press
+        input(type="text" placeholder="Поиск..." required).request-status__input.request-status__input--full-width
+        button.request-status__input--button
+      .form__row.form__row--press
+        label.form__block.form__block--press-date.form__block--date-option
+          input(type="date" ).request-status__input.request-status__input--press.request-status__input--press-date.request-status__input--without-button
+          span.request-status__span.request-status__span--press -
+          input(type="date" ).request-status__input.request-status__input--press.request-status__input--without-button
+    ul.search-page__placeholder
+      li.search-page__placeholder-item Найдено: 5
+      li.search-page__placeholder-item Область поиска: раздел — везде, дата — все
+    .search__wrapper
+      .news__item.news__item--search
+        .news__counter 1.
+        .news__content.news__content--search
+          .news__heading
+            a(href="#").news__link
+              h2.news__title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          .news__date.news__date--clock
+            span.time 17:22
+            span.date 30.04.2020
+          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+          ul.search-tags
+            each item, index in tags[0]
+              li.search-tags__item
+                a.search-tags__link(href="#") #{item}
+          .news__text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
+      .news__item.news__item--search
+        .news__counter 1.
+        .news__content.news__content--search
+          .news__heading
+            a(href="#").news__link
+              h2.news__title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          .news__date.news__date--clock
+            span.time 17:22
+            span.date 30.04.2020
+          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+          ul.search-tags
+            each item, index in tags[0]
+              li.search-tags__item
+                a.search-tags__link(href="#") #{item}
+          .news__text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
+      .news__item.news__item--search
+        .news__counter 1.
+        .news__content.news__content--search
+          .news__heading
+            a(href="#").news__link
+              h2.news__title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo!
+          .news__date.news__date--clock
+            span.time 17:22
+            span.date 30.04.2020
+          - var tags = [['Новости', 'Право на историю', 'Эстония'], []];
+          ul.search-tags
+            each item, index in tags[0]
+              li.search-tags__item
+                a.search-tags__link(href="#") #{item}
+          .news__text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla debitis deleniti rerum inventore dolorum explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam explicabo voluptatibus aut. Quos consequuntur quas veniam ut quo error blanditiis aspernatur autem, magni, enim praesentium recusandae aliquam rerum, cumque possimus! Voluptatum, illum similique. Quos cupiditate, ratione officia velit consequatur blanditiis iure eligendi. Nam, repellat. Consectetur quia deserunt atque facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quasi accusamus error aliquid ratione commodi esse iste molestiae neque deleniti!
+
+    include ./pagination
+
+
+

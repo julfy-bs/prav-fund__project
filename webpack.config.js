@@ -105,7 +105,9 @@ module.exports = (env, argv) => {
 			pressCenterVideoOverlay: "./src/main__pressCenterVideoOverlay.js",
 			contacts: "./src/main__contacts.js",
 			centersHome: "./src/main__centersHome.js",
-			centersContact: "./src/main__centersContact.js"
+			centersContact: "./src/main__centersContact.js",
+			print: "./src/main__print.js",
+			search: "./src/main__searchPage.js"
 		},
 		output: {
 			path: path.resolve(__dirname, "./dist"),
@@ -271,6 +273,16 @@ module.exports = (env, argv) => {
 				template: "./src/pug/pages/centersContact.pug",
 				chunks: ["centersContact"],
 				filename: "centersContact.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/printPage.pug",
+				chunks: ["print"],
+				filename: "print.html"
+			}),
+			new HtmlWebpackPlugin({
+				template: "./src/pug/pages/search.pug",
+				chunks: ["search"],
+				filename: "search.html"
 			}),
 			new SpriteLoaderPlugin({ plainSprite: true }),
 			new VueLoaderPlugin()
