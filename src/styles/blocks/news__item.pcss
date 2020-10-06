@@ -52,11 +52,11 @@
     flex-flow: column wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 0 30px 35px;
+    margin: 0 30px 10px;
     padding: 0 0 20px;
     border-bottom: 1px solid #dce5ec;
 
-    &:nth-child(3) {
+    &:last-child {
       border: none;
       margin-bottom: 10px;
     }
@@ -305,6 +305,10 @@
   font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  &--news {
+    max-height: 58px;
+  }
 
   &--position {
     line-height: 1.6;
