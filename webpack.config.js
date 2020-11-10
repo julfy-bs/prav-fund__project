@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
 	const isProductionBuild = argv.mode === "production";
-	const publicPath = "/prav-fund__project/";
+	const publicPath = "/local/templates/pravfond/assets/images/";
 
 	const pcss = {
 		test: /\.(p|post|)css$/,
