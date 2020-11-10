@@ -102,8 +102,8 @@
 }
 
 .library__item {
-  flex: 0 0 35%;
-  max-width: 35%;
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
 //border-left: 1px solid #dce5ec; max-height: 180px; height: 100%;
 
   @include bigTablets {
@@ -131,8 +131,8 @@
 }
 
 .library__header {
+  height: 100%;
   width: 100%;
-  max-height: 240px;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -160,11 +160,20 @@
   background-position: center;
 }
 
+.library__description-wrapper {
+  width: 60%;
+  height: 100%;
+  font-size: 13px;
+  color: #6f6f6e;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
 
 .library__description {
-  color: #6f6f6e;
-  font-size: 13px;
-  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 5px;
 }
 
 .book__name {
@@ -172,7 +181,7 @@
   font-size: 16px;
   margin-bottom: 10px;
   overflow: hidden;
-  max-height: 45px;
+  //max-height: 45px;
 
   & > a {
     &:hover {
