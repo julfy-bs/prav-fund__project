@@ -167,6 +167,7 @@
   border-top: 1px solid #cccccc;
   padding: 35px 0;
   text-decoration: none;
+  min-height: 115px;
 
 //&:hover { //  .download-general__heading { //    color: $hover-color; //  } // //  .download-general__link { //    color: $hover-color; //  } //}
 
@@ -185,9 +186,9 @@
 .download-general__wrapper {
   display: flex;
   flex-flow: column nowrap;
-  padding-left: 25px;
-  max-width: 70%;
-
+  padding-left: 85px;
+  //max-width: 70%;
+  position: relative;
 }
 
 .download-general__heading {
@@ -242,5 +243,54 @@
   &:hover {
     text-decoration: underline;
     color: $hover-color;
+  }
+}
+
+.download-document {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 70px;
+
+  &--pdf {
+    background: svg-load('file_PDF_small.svg', fill=#40aaf0, width=100%, height=100%) bottom center no-repeat;
+
+    &:hover {
+      background: svg-load('file_PDF_small.svg', fill=#ea1f21, width=100%, height=100%) bottom center no-repeat;
+    }
+  }
+
+  &--doc {
+    background: svg-load('file_DOC_small.svg', fill=#40aaf0, width=100%, height=100%) bottom center no-repeat;
+
+    &:hover {
+        background: svg-load('file_DOC_small.svg', fill=#2b569a, width=100%, height=100%) bottom center no-repeat;
+    }
+  }
+
+  &--jpg {
+      background: svg-load('file_JPG_small.svg', fill=#40aaf0, width=100%, height=100%) bottom center no-repeat;
+
+    &:hover {
+        background: svg-load('file_JPG_small.svg', fill=#f5980c;, width = 100 %, height = 100 %) bottom center no-repeat;
+    }
+  }
+
+  &--ppt {
+      background: svg-load('file_PPT_small.svg', fill=#40aaf0, width=100%, height=100%) bottom center no-repeat;
+
+    &:hover {
+        background: svg-load('file_PPT_small.svg', fill=#e9633d;, width = 100 %, height = 100 %) bottom center no-repeat;
+    }
+  }
+
+  &--xls {
+      background: svg-load('file_XLS_small.svg', fill=#40aaf0, width=100%, height=100%) bottom center no-repeat;
+
+    &:hover {
+
+        background: svg-load('file_XLS_small.svg', fill=#009c57;, width = 100 %, height = 100 %) bottom center no-repeat;
+    }
   }
 }
