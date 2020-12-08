@@ -134,12 +134,16 @@
   padding: 20px 0;
 }
 
-.article__img--directorate-page {
+.news__image--article img, .article__img--directorate-page {
   display: block;
   min-width: 100%;
   margin: 0 0 0 0;
   padding: 0;
-  max-width: none;
+  max-width: 430px;
+
+  @include tablets {
+    max-width: 100%;
+  }
 }
 
 .article-item-img {
